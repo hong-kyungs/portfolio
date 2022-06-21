@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+*{margin: 0px; padding: 0px; box-sizing: border-box;}
+ul,ol,li{list-style: none;}
+a{text-decoration: none;}
+
+body{
+    width: 100%; height: 100%;
+    #header{
+        width: 100%; height: 100vh;
+        position: relative;
+        &::after{
+            content: ''; display: block;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 7vh;
+            background: #b2c5c1;
+            opacity: 0.9;
+            z-index: 0;
+        }
+        .background{
+            width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0;
+            overflow: hidden;
+            img{
+                width: 100%; height: 100%;
+                object-fit: cover;
+                opacity: 0.9;
+            }
+        }
+        .inner{
+            width: 1180px; height: 25vh; margin: 0 auto;
+            position: relative;
+            // background: rgba(0,0,0,0.2);
+            h1{
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                a{
+                    font: bold 30px/1 'jua';
+                    letter-spacing: 3px;
+                    color: #fff;
+                }
+            }
+            .menuWeb{
+                #gnb{
+                    position: absolute;
+                    bottom: 0; left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    li{
+                        a{
+                            display: block;
+                            padding: 10px 30px;
+                            font: bold 16px/1 'Jua'; letter-spacing: 1.3px;
+                            color: #fff;
+                        }
+                    }
+                    &::before, &::after{
+                        content: ""; display: block;
+                        width: 100%; height: 1px;
+                        background: #fff;
+                        position: absolute;
+                    }
+                    &::before{ bottom: 40px;}
+                    &::after{bottom: 0;}
+                }
+                .util{
+                    position: absolute; top: 20px; right: 36px;
+                    z-index: 1;
+                    li{
+                        float: left; margin-left: 30px;
+                        a{
+                            font: 16px/1 'jua'; color: #fff;
+                        }
+                    }
+                }
+
+            }
+        }
+        .txt{
+            width: 600px; height: 50vh;
+            position: relative; 
+            top: 10%; left: 50%; transform: translateX(-50%);
+            padding: 20px;
+            h2{
+                font: 50px/1 'jua'; color: #fff;
+                margin-top: 100px;
+                text-align: center;
+            }
+            p{
+                font: 16px/1.4 'jua'; color: #fff;
+                margin-top: 30px;
+                text-align: center;
+            }
+            a{
+                display: block; width: 300px; height: 40px;
+                background: #b2c5c1;
+                font: bold 14px/40px 'jua'; color: #fff;
+                letter-spacing: 3px; text-align: center;
+                margin-top: 30px;
+                margin-left: 50%; transform: translateX(-50%);
+            }
+        }
+        
+    }
+
+    
+
+    #introduction{
+        width: 100%; height: 100vh;
+        background: lightgoldenrodyellow;
+    }
+    #video{
+        width: 100%; height: 100vh;
+        background: lightcyan;
+    }
+    #product{
+        width: 100%; height: 100vh;
+        background: lightpink;
+    }
+    #community{
+        width: 100%; height: 100vh;
+        background: lightgray;
+    }
+    #footer{
+        width: 100%; height: 30vh;
+        background: #b2c5c1;
+    }
+}

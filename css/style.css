@@ -1,3 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+body #header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+body #header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7vh;
+  background: #b2c5c1;
+  opacity: 0.9;
+  z-index: 0;
+}
+body #header .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+body #header .background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+body #header .inner {
+  width: 1180px;
+  height: 25vh;
+  margin: 0 auto;
+  position: relative;
+}
+body #header .inner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #header .inner h1 a {
+  font: bold 30px/1 "jua";
+  letter-spacing: 3px;
+  color: #fff;
+}
+body #header .inner .menuWeb #gnb {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+body #header .inner .menuWeb #gnb li a {
+  display: block;
+  padding: 10px 30px;
+  font: bold 16px/1 "Jua";
+  letter-spacing: 1.3px;
+  color: #fff;
+}
+body #header .inner .menuWeb #gnb::before, body #header .inner .menuWeb #gnb::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+}
+body #header .inner .menuWeb #gnb::before {
+  bottom: 40px;
+}
+body #header .inner .menuWeb #gnb::after {
+  bottom: 0;
+}
+body #header .inner .menuWeb .util {
+  position: absolute;
+  top: 20px;
+  right: 36px;
+  z-index: 1;
+}
+body #header .inner .menuWeb .util li {
+  float: left;
+  margin-left: 30px;
+}
+body #header .inner .menuWeb .util li a {
+  font: 16px/1 "jua";
+  color: #fff;
+}
+body #header .txt {
+  width: 600px;
+  height: 50vh;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+}
+body #header .txt h2 {
+  font: 50px/1 "jua";
+  color: #fff;
+  margin-top: 100px;
+  text-align: center;
+}
+body #header .txt p {
+  font: 16px/1.4 "jua";
+  color: #fff;
+  margin-top: 30px;
+  text-align: center;
+}
+body #header .txt a {
+  display: block;
+  width: 300px;
+  height: 40px;
+  background: #b2c5c1;
+  font: bold 14px/40px "jua";
+  color: #fff;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+body #introduction {
+  width: 100%;
+  height: 100vh;
+  background: lightgoldenrodyellow;
+}
+body #video {
+  width: 100%;
+  height: 100vh;
+  background: lightcyan;
+}
+body #product {
+  width: 100%;
+  height: 100vh;
+  background: lightpink;
+}
+body #community {
+  width: 100%;
+  height: 100vh;
+  background: lightgray;
+}
+body #footer {
+  width: 100%;
+  height: 30vh;
+  background: #b2c5c1;
+}
 
 /*# sourceMappingURL=style.css.map */
