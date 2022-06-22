@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Spectral&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -31,10 +31,13 @@ body #header::after {
   width: 100%;
   height: 7vh;
   background: #b2c5c1;
-  opacity: 0.9;
+  opacity: 0.4;
   z-index: 0;
 }
-body #header .background {
+body #header .inner {
+  color: #000;
+}
+body #header .inner .background {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -42,30 +45,30 @@ body #header .background {
   left: 0;
   overflow: hidden;
 }
-body #header .background img {
+body #header .inner .background img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.9;
+  filter: brightness(60%);
 }
-body #header .inner {
+body #header .inner .header_nav {
   width: 1180px;
   height: 25vh;
   margin: 0 auto;
   position: relative;
 }
-body #header .inner h1 {
+body #header .inner .header_nav h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-body #header .inner h1 a {
-  font: bold 30px/1 "jua";
+body #header .inner .header_nav h1 a {
+  font: bold 30px/1 "Alegreya Sans SC";
   letter-spacing: 3px;
   color: #fff;
 }
-body #header .inner .menuWeb #gnb {
+body #header .inner .header_nav .menuWeb #gnb {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -74,14 +77,17 @@ body #header .inner .menuWeb #gnb {
   display: flex;
   justify-content: space-evenly;
 }
-body #header .inner .menuWeb #gnb li a {
+body #header .inner .header_nav .menuWeb #gnb li a {
   display: block;
-  padding: 10px 30px;
-  font: bold 16px/1 "Jua";
+  padding: 12px 50px;
+  font: bold 16px/1 "Alegreya Sans SC";
   letter-spacing: 1.3px;
   color: #fff;
 }
-body #header .inner .menuWeb #gnb::before, body #header .inner .menuWeb #gnb::after {
+body #header .inner .header_nav .menuWeb #gnb li a:hover {
+  background: #b2c5c1;
+}
+body #header .inner .header_nav .menuWeb #gnb::before, body #header .inner .header_nav .menuWeb #gnb::after {
   content: "";
   display: block;
   width: 100%;
@@ -89,84 +95,229 @@ body #header .inner .menuWeb #gnb::before, body #header .inner .menuWeb #gnb::af
   background: #fff;
   position: absolute;
 }
-body #header .inner .menuWeb #gnb::before {
+body #header .inner .header_nav .menuWeb #gnb::before {
   bottom: 40px;
 }
-body #header .inner .menuWeb #gnb::after {
+body #header .inner .header_nav .menuWeb #gnb::after {
   bottom: 0;
 }
-body #header .inner .menuWeb .util {
+body #header .inner .header_nav .menuWeb .util {
   position: absolute;
   top: 20px;
   right: 36px;
   z-index: 1;
 }
-body #header .inner .menuWeb .util li {
+body #header .inner .header_nav .menuWeb .util li {
   float: left;
   margin-left: 30px;
 }
-body #header .inner .menuWeb .util li a {
-  font: 16px/1 "jua";
+body #header .inner .header_nav .menuWeb .util li a {
+  font: 16px/1 "Alegreya Sans SC";
   color: #fff;
 }
-body #header .txt {
-  width: 600px;
-  height: 50vh;
+body #header .inner .txt {
+  width: 1180px;
+  height: 75vh;
+  margin: 0 auto;
   position: relative;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 20px;
+  padding: 30px 200px;
 }
-body #header .txt h2 {
-  font: 50px/1 "jua";
+body #header .inner .txt h2 {
+  font: 50px/1 "Alegreya Sans SC";
   color: #fff;
-  margin-top: 100px;
+  margin-top: 150px;
   text-align: center;
 }
-body #header .txt p {
-  font: 16px/1.4 "jua";
+body #header .inner .txt p {
+  font: 20px/1.4 "Alegreya Sans SC";
   color: #fff;
   margin-top: 30px;
   text-align: center;
 }
-body #header .txt a {
+body #header .inner .txt a {
   display: block;
   width: 300px;
   height: 40px;
-  background: #b2c5c1;
-  font: bold 14px/40px "jua";
+  border: 2px solid #b2c5c1;
+  font: bold 14px/40px "Alegreya Sans SC";
   color: #fff;
   letter-spacing: 3px;
   text-align: center;
   margin-top: 30px;
   margin-left: 50%;
   transform: translateX(-50%);
+  border-radius: 5px;
+}
+body #header .inner .txt a:hover {
+  background-color: #b2c5c1;
 }
 body #introduction {
   width: 100%;
   height: 100vh;
-  background: lightgoldenrodyellow;
+  background: #F0E8E4;
+}
+body #introduction .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+body #introduction .inner div {
+  width: 48%;
+  height: 100%;
+  padding: 150px 0;
+}
+body #introduction .inner .introduction_txt h2 {
+  font: bold 50px/1 "Spectral";
+  color: #222;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+body #introduction .inner .introduction_txt h3 {
+  font: bold 20px/1 "Spectral";
+  color: #476257;
+  margin-bottom: 30px;
+}
+body #introduction .inner .introduction_txt p {
+  font: normal 17px/1.3 "Spectral";
+  color: #666;
+}
+body #introduction .inner .introduction_txt a {
+  display: block;
+  width: 40%;
+  height: 40px;
+  background: #476257;
+  margin-top: 30px;
+  font: 14px/40px "Spectral";
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  border-radius: 3px;
+}
+body #introduction .inner .introduction_img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+body #introduction .inner .introduction_img p {
+  font: normal 15px/1 "Spectral";
+  color: #666;
+  text-align: end;
 }
 body #video {
   width: 100%;
-  height: 100vh;
-  background: lightcyan;
+  padding: 30px;
+  background: #F0E8E4;
+}
+body #video .inner {
+  width: 100%;
+  position: relative;
+}
+body #video .inner article {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+body #video .inner article .vid_img {
+  width: 100%;
+  height: 100%;
+}
+body #video .inner article .vid_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+body #video .inner article i {
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+}
+body #video .inner article h2 {
+  font: bold 25px/1 "Spectral";
+  letter-spacing: 3px;
+  color: #fff;
+  position: absolute;
+  bottom: 10vh;
+  left: 5vh;
+}
+body #video .inner article P {
+  font: 17px/1 "Spectral";
+  color: #b2c5c1;
+  position: absolute;
+  bottom: 6vh;
+  left: 5vh;
 }
 body #product {
   width: 100%;
-  height: 100vh;
-  background: lightpink;
+  padding: 100px 0;
+  background: #F0E8E4;
+}
+body #product .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+body #product .inner .wrap {
+  width: 100%;
+}
+body #product .inner .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #product .inner .wrap div {
+  float: left;
+  width: 300px;
+  height: 300px;
+}
+body #product .inner .wrap div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 body #community {
   width: 100%;
-  height: 100vh;
-  background: lightgray;
+  padding: 30px;
+  background: #F0E8E4;
+}
+body #community .inner {
+  width: 100%;
+  height: 70vh;
+  margin: 0 auto;
+  background: #b2c5c1;
+}
+body #community .inner article {
+  width: 100%;
+  position: relative;
+  padding: 10vh 5vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+body #community .inner article .cus_img {
+  width: 70px;
+  height: 70%;
+  border-radius: 100%;
+}
+body #community .inner article .cus_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 body #footer {
   width: 100%;
   height: 30vh;
-  background: #b2c5c1;
+  background: #476257;
 }
 
 /*# sourceMappingURL=style.css.map */
