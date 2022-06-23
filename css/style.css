@@ -215,10 +215,25 @@ body #video .inner {
   width: 100%;
   position: relative;
 }
+body #video .inner .hidden_vid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+body #video .inner .play_img {
+  z-index: 0;
+}
 body #video .inner article {
   width: 100%;
   height: 80vh;
   position: relative;
+}
+body #video .inner article .pic {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 body #video .inner article .vid_img {
   width: 100%;
@@ -256,6 +271,26 @@ body #video .inner article P {
   bottom: 6vh;
   left: 5vh;
 }
+body #video .inner figure.pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  padding: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #video .inner figure.pop .btnClose {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+  cursor: pointer;
+}
 body #product {
   width: 100%;
   padding: 100px 0;
@@ -266,23 +301,72 @@ body #product .inner {
   margin: 0 auto;
   position: relative;
 }
-body #product .inner .wrap {
-  width: 100%;
+body #product .inner h1 {
+  font: bold 35px/1 "Spectral";
+  color: #222;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-align: center;
 }
-body #product .inner .wrap::after {
+body #product .inner h1::after {
   content: "";
   display: block;
-  clear: both;
-}
-body #product .inner .wrap div {
-  float: left;
   width: 300px;
-  height: 300px;
+  height: 1px;
+  background: #476257;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-body #product .inner .wrap div img {
+body #product .inner > p {
+  font: bold 17px/1 "Spectral";
+  color: #476257;
+  margin-bottom: 100px;
+  text-align: center;
+}
+body #product .inner .wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+body #product .inner .wrap article {
+  width: 280px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+body #product .inner .wrap article img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+body #product .inner .wrap article .img_txt {
+  width: 100%;
+  height: 200px;
+  background: rgba(178, 197, 193, 0.5);
+  position: absolute;
+  border-top: 3px solid #476257;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+body #product .inner .wrap article .img_txt h3 {
+  font: bold 22px/1 "Spectral";
+  color: #555;
+  padding: 60px 0 20px 20px;
+}
+body #product .inner .wrap article .img_txt > p {
+  font: bold 14px/1 "Spectral";
+  color: #555;
+  padding: 0 20px;
+}
+body #product .inner .wrap article:hover img {
+  filter: grayscale(60%);
+}
+body #product .inner .wrap article:hover .img_txt {
+  transform: translateY(0%);
 }
 body #community {
   width: 100%;
@@ -291,33 +375,104 @@ body #community {
 }
 body #community .inner {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   margin: 0 auto;
-  background: #b2c5c1;
+  background: url(../img/comment.jpg) no-repeat center top/cover;
+  position: relative;
 }
 body #community .inner article {
   width: 100%;
+  height: 100%;
   position: relative;
-  padding: 10vh 5vh;
+  padding: 10vh 15vw;
+}
+body #community .inner article .comment {
+  width: 100%;
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-body #community .inner article .cus_img {
-  width: 70px;
-  height: 70%;
-  border-radius: 100%;
+body #community .inner article .comment h1 {
+  font: bold 30px/1 "Alegreya Sans SC";
+  margin: 15vh 0;
 }
-body #community .inner article .cus_img img {
+body #community .inner article .comment .cus_img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5vh;
+}
+body #community .inner article .comment .cus_img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;
+}
+body #community .inner article .comment h2 {
+  font: 18px/1 "spectral";
+  text-align: center;
+  margin-bottom: 5vh;
+}
+body #community .inner article .comment h3 {
+  font: 14px/1 "Alegreya Sans SC";
 }
 body #footer {
   width: 100%;
-  height: 30vh;
   background: #476257;
+}
+body #footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 2vw 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #footer .inner h1 {
+  font: bold 30px/1 "Alegreya Sans SC";
+  letter-spacing: 3px;
+  color: #fff;
+  margin-bottom: 2vh;
+}
+body #footer .inner > p {
+  font: 16px/1.3 "Alegreya Sans SC";
+  padding: 0 10vw;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3vh;
+}
+body #footer .inner > p strong {
+  font-size: 18px;
+}
+body #footer .inner .sns {
+  display: flex;
+  margin-bottom: 3vh;
+}
+body #footer .inner .sns li a {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #476257;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #footer .inner .sns li:first-of-type a {
+  margin-left: 0;
+}
+body #footer .inner address {
+  font: 14px/1.2 "Alegreya Sans SC";
+  margin-bottom: 1vh;
+  color: #333;
+  text-align: center;
+}
+body #footer .inner span {
+  font: 14px/1 "Alegreya Sans SC";
+  color: #333;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -118,9 +118,6 @@ body{
             }
         }
     }
-
-    
-
     #introduction{
         width: 100%; height: 100vh;
         background: #F0E8E4;
@@ -142,7 +139,8 @@ body{
                 }
                 h3{
                     font: bold 20px/1 'Spectral';
-                    color: #476257;                    margin-bottom: 30px;
+                    color: #476257;                    
+                    margin-bottom: 30px;
                 }
                 p{
                     font: normal 17px/1.3 'Spectral';
@@ -176,8 +174,15 @@ body{
         background: #F0E8E4;
         .inner{
             width: 100%; position: relative;
+            .hidden_vid{
+                position: absolute; top: 0; left: 0;
+                opacity: 0; z-index: 1;}
+            .play_img{z-index: 0;}
             article{
                 width: 100%; height: 80vh; position: relative;
+                .pic{
+                    display: block; width: 100%; height: 100%;
+                }
                 .vid_img{
                     width: 100%; height: 100%;
                     img{
@@ -208,6 +213,21 @@ body{
                     bottom: 6vh; left: 5vh;
                 }
             }
+            figure.pop{
+                width: 100%; height: 100vh;
+                position: fixed; top: 0; left: 0;
+                background: rgba(0,0,0,0.8);
+                overflow: hidden;
+                padding: 15vh;
+                display: flex; 
+                justify-content: center;
+                align-items: center;
+                .btnClose{
+                    position: absolute; top: 50px; right: 50px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
         }
     }
     #product{
@@ -215,52 +235,160 @@ body{
         background: #F0E8E4;
         .inner{
             width: 1180px; margin: 0 auto; position: relative;
-            h1{}
-            p{}
-            .wrap{
-                width: 100%;
+            h1{
+                font: bold 35px/1 'Spectral';
+                color: #222;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+                text-align: center;
                 &::after{
-                    content: ''; display: block; clear: both;
+                    content: ''; display: block;
+                    width: 300px; height: 1px;
+                    background: #476257;
+                    position: absolute;
+                    top: 40px; left: 50%; transform: translateX(-50%);
                 }
-                div{
-                    float: left;
-                    width: 300px; height: 300px;
+            }
+            >p{
+                font: bold 17px/1 'Spectral';
+                    color: #476257;                    
+                    margin-bottom: 100px;
+                    text-align: center;
+            }
+            .wrap{
+                width: 100%; display: flex;
+                justify-content: space-evenly;
+                // &::after{
+                //     content: ''; display: block; clear: both;
+                // }
+                article{
+                    width: 280px; height: 400px; position: relative;
+                    overflow: hidden;
                     img{
                         width: 100%; height: 100%;
                         object-fit: cover;
-                    } 
+                    }
+                    .img_txt{
+                        width: 100%; height: 200px;
+                        background: rgba(178, 197, 193,0.5);
+                        position: absolute;
+                        border-top: 3px solid #476257;
+                        bottom: 0; left: 0;
+                        transform: translateY(100%);
+                        transition: 0.5s;
+
+                        h3{
+                            font: bold 22px/1 'Spectral'; color: #555;
+                            padding: 60px 0 20px 20px; 
+                        }
+                        >p{
+                            font: bold 14px/1 'Spectral'; color: #555;
+                            padding: 0 20px;
+                        }
+
+                    }
+                    &:hover img{
+                        filter: grayscale(60%);
+                    }
+                    &:hover .img_txt{
+                        transform: translateY(0%);
+                    }
                 }
             }
         }
     }
     #community{
         width: 100%; padding: 30px;
-        background: #F0E8E4;;
+        background: #F0E8E4;
         .inner{
-            width: 100%; height: 70vh;
+            width: 100%; height: 80vh;
             margin: 0 auto;
-            background: #b2c5c1;
+            background: url(../img/comment.jpg) no-repeat center top/cover;
+            position: relative;
             article{
-                width: 100%; position: relative;
-                padding: 10vh 5vh;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-content: center;
-                .cus_img{
-                    width: 70px; height: 70%;
-                    border-radius: 100%;
-                    img{
-                        width: 100%; height: 100%;
-                        object-fit: cover;
+                width: 100%; height: 100%;
+                position: relative;
+                padding: 10vh 15vw;
+                .comment{
+                    width: 100%; position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h1{
+                        font: bold 30px/1 'Alegreya Sans SC';
+                        margin: 15vh 0;
+
+                    }
+                    .cus_img{
+                        width: 80px; height: 80px;
+                        margin-bottom: 5vh;
+                        img{
+                            width: 100%; height: 100%;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                    }
+                    h2{
+                        font: 18px/1 'spectral';
+                        text-align: center;
+                        margin-bottom: 5vh;
+                    }
+                    h3{
+                        font: 14px/1 'Alegreya Sans SC'; 
                     }
                 }
-
             }
         }
     }
     #footer{
-        width: 100%; height: 30vh;
+        width: 100%;
         background: #476257;
+        .inner{
+            width: 1180px; margin: 0 auto; padding: 2vw 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                font: bold 30px/1 'Alegreya Sans SC';
+                letter-spacing: 3px;
+                color: #fff;
+                margin-bottom: 2vh;
+            }
+
+            >p{
+                font: 16px/1.3 'Alegreya Sans SC';
+                padding: 0 10vw;
+                text-align: center;
+                color: #fff;
+                margin-bottom: 3vh;
+                strong{font-size: 18px;}
+            }
+            .sns{
+                display: flex; margin-bottom: 3vh;
+                li{
+                    a{
+                        width: 30px; height: 30px;
+                        background: #fff;
+                        border-radius: 50%; margin-left: 20px;
+                        font-size: 12px; color: #476257;
+    
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &:first-of-type a{margin-left: 0;}
+                }
+            }
+
+            address{
+                font: 14px/1.2 'Alegreya Sans SC';
+                margin-bottom: 1vh; color: #333;
+                text-align: center;
+            }
+            span{
+                font: 14px/1 'Alegreya Sans SC'; color: #333;
+            }
+        }
     }
 }

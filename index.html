@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="jo">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@
                     <ul class="util">
                         <li><a href="#">Login</a></li>
                         <li><a href="#">Join</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Shop</a></li>
                     </ul>
                 </nav>
 
@@ -70,11 +70,16 @@
     <section id="video">
         <!-- wine-making 영상 -  -->
         <div class="inner">
-            <article>
+            <article class="hidden_vid">
+
+            </article>
+            <article class="play_img">
                 <div class="vid_img">
                     <img src="img/pic6.jpg" alt="포도밭사진">
                 </div>
-                <i class="fa-solid fa-play"></i>
+                <a href="#">
+                    <i class="fa-solid fa-play"></i>
+                </a>
                 <h2>WINEMAKING</h2>
                 <p>Lorem ipsum dolor sit.</p>
             </article>
@@ -82,20 +87,32 @@
     </section>
 
     <section id="product">
-
         <div class="inner">
             <h1>OUR WINES</h1>
             <P>RED / WHITE / ROSE</P>
             <div class="wrap">
-                <div class="p_img">
+                <article>
                     <img src="img/p_img1.jpg" alt="레드와인">
-                </div>
-                <div class="p_img">
+                    <div class="img_txt">
+                        <h3>RED WINE</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </article>
+                <article>
                     <img src="img/p_img2.jpg" alt="화이트와인">
-                </div>
-                <div class="p_img">
+                    <div class="img_txt">
+                        <h3>WHITE WINE</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </article>
+                <article>
                     <img src="img/p_img3.jpg" alt="로제와인">
-                </div>
+                    <div class="img_txt">
+                        <h3>ROSE WINE</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </article>
+                
             </div>
 
         </div>
@@ -106,39 +123,46 @@
         <!-- swiper/slide 적용 -->
         <div class="inner">
             <article>
-                <div class="cus_img">
-                    <img src="img/poeple1.jpeg" alt="남자사진">
+                <div class="comment">
+                    <h1>What&nbsp; Our&nbsp; Customers&nbsp; Say</h1>
+                    <div class="cus_img">
+                        <img src="img/people1.jpeg" alt="남자사진">
+                    </div>
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur reiciendis veniam sequi ad cumque corrupti maiores, sunt quo aspernatur nisi?</h2>
+                    <h3>Andrew Garfield</h3>
                 </div>
-                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur reiciendis veniam sequi ad cumque corrupti maiores, sunt quo aspernatur nisi?</h2>
-                <h3>Andrew Garfield</h3>
             </article>
             <!-- <article>
-                <div class="cus_img">
-                    <img src="" alt="">
+                <div class="comment">
+                    <h1>What&nbsp; Our&nbsp; Customers&nbsp; Say</h1>
+                    <div class="cus_img">
+                        <img src="img/people2.jpeg" alt="여자사진">
+                    </div>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ratione, sequi inventore alias facere sint eligendi consectetur suscipit ducimus, harum reiciendis ex explicabo excepturi quae?</h2>
+                    <h3>Emma Watson</h3>
                 </div>
-                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur reiciendis veniam sequi ad cumque corrupti maiores, sunt quo aspernatur nisi?</h2>
-                <h3>Andrew Garfield</h3>
             </article>
             <article>
-                <div class="cus_img">
-                    <img src="" alt="">
+                <div class="comment">
+                    <h1>What&nbsp; Our&nbsp; Customers&nbsp; Say</h1>
+                    <div class="cus_img">
+                        <img src="img/people3.jpeg" alt="남자사진">
+                    </div>
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur reiciendis veniam sequi ad cumque corrupti maiores, sunt quo aspernatur nisi?</h2>
+                    <h3>Zac Efron</h3>
                 </div>
-                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur reiciendis veniam sequi ad cumque corrupti maiores, sunt quo aspernatur nisi?</h2>
-                <h3>Andrew Garfield</h3>
             </article> -->
+            
         </div>
     </section>
 
     <footer id="footer">
         <div class="inner">
-            <h1>Green oak</h1>
-            <ul class="gnb2">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Youtube</a></li>
-                <li><a href="#">community</a></li>
-            </ul>
+            <h1>GREEN OAK</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad qui sint eos aliquid reprehenderit recusandae quasi doloremque error? Magnam obcaecati, molestiae quibusdam cupiditate inventore harum voluptas itaque quod nesciunt reprehenderit? <br>
+            <strong>We are waiting right for you.</strong>   
+            </p>
+            
             <ul class="sns">
                 <li>
                     <a href="#">
@@ -155,12 +179,17 @@
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
+                <li>
+                    <a href="$">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
             </ul>
             <address>
                 address : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, similique. <br/>
                 TEL : +82-2-2100-2100 FAX : +82-2-2100-2101
             </address>
-            <p>Copyright &copy; 2022 Greenoak ALL Right reserved.</p>
+            <span>Copyright &copy; 2022 Greenoak ALL Right reserved.</span>
         </div>
     </footer>
 </body>
