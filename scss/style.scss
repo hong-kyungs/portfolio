@@ -121,6 +121,7 @@ body{
     #introduction{
         width: 100%; height: 100vh;
         background: #F0E8E4;
+        overflow: hidden;
         .inner{
             width: 1180px; height: 100%; margin: 0 auto;
             position: relative;
@@ -160,6 +161,10 @@ body{
                 img{
                     width: 100%; height: 350px;
                     object-fit: cover;
+                    transform-origin: top;
+                    transform: rotateX(90deg);
+                    opacity: 0;
+                    transition: 0.5s;
                 }
                 p{
                     font: normal 15px/1 'Spectral';
@@ -167,8 +172,32 @@ body{
                     text-align: end;
                 }
             }
+            :hover img{
+                transform: rotateX(0deg); opacity: 1;
+            }
+            ul{
+                position: fixed; z-index: 5;
+                right: 50px; top: 50%; transform: translateY(-50%);
+                li{
+                    width: 80px; height: 80px; border-radius: 50%;
+                    background: #999; margin-bottom: 5vh;
+                    cursor: pointer; transition: 0.5s;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        font: bold 14px/1 'spectral'; color: #222;
+                    }
+                    &.on{
+                        background: #476257; 
+                        a {color: #fff;}
+                    }
+                }
+            }
         }
     }
+
+
     #video{
         width: 100%; padding: 30px;
         background: #F0E8E4;
