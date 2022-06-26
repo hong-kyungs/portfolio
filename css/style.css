@@ -218,7 +218,7 @@ body #introduction .inner :hover img {
 body #introduction .inner ul {
   position: fixed;
   z-index: 5;
-  right: 50px;
+  right: 25px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -411,48 +411,94 @@ body #community {
   padding: 30px;
   background: #F0E8E4;
 }
-body #community .inner {
+body #community .com_inner {
   width: 100%;
   height: 80vh;
   margin: 0 auto;
   background: url(../img/comment.jpg) no-repeat center top/cover;
   position: relative;
+  overflow: hidden;
 }
-body #community .inner article {
-  width: 100%;
+body #community .com_inner .wrap {
+  width: 300%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body #community .com_inner .wrap article {
+  width: 33.333%;
+  height: 100%;
+  float: left;
   padding: 10vh 15vw;
 }
-body #community .inner article .comment {
+body #community .com_inner .wrap article .comment {
   width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body #community .inner article .comment h1 {
+body #community .com_inner .wrap article .comment h1 {
   font: bold 30px/1 "Alegreya Sans SC";
-  margin: 15vh 0;
+  margin: 15vh 0 10vh;
 }
-body #community .inner article .comment .cus_img {
+body #community .com_inner .wrap article .comment .cus_img {
   width: 80px;
   height: 80px;
   margin-bottom: 5vh;
 }
-body #community .inner article .comment .cus_img img {
+body #community .com_inner .wrap article .comment .cus_img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
-body #community .inner article .comment h2 {
+body #community .com_inner .wrap article .comment h2 {
   font: 18px/1 "spectral";
   text-align: center;
   margin-bottom: 5vh;
 }
-body #community .inner article .comment h3 {
+body #community .com_inner .wrap article .comment h3 {
   font: 14px/1 "Alegreya Sans SC";
+}
+body #community .com_inner .prev {
+  position: absolute;
+  left: 10vw;
+  top: 50%;
+  font-size: 30px;
+  color: #616161;
+}
+body #community .com_inner .next {
+  position: absolute;
+  right: 10vw;
+  top: 50%;
+  font-size: 30px;
+  color: #616161;
+}
+body #community .com_inner ul {
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body #community .com_inner ul li {
+  float: left;
+  margin-right: 1vw;
+}
+body #community .com_inner ul li:last-of-type {
+  margin-right: 0;
+}
+body #community .com_inner ul li a {
+  display: block;
+  width: 2vw;
+  height: 2px;
+  background: #616161;
+}
+body #community .com_inner ul li.on a {
+  width: 3vw;
+  background: #ff94c2;
 }
 body #footer {
   width: 100%;

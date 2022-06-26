@@ -72,4 +72,70 @@ fetch(url)
 
     // })
 
-/* scroll */
+
+
+/* -------- slider -------- */
+
+const slider = document.querySelector(".com_inner");
+const wrap = slider.querySelector(".wrap");
+const articles = slider.querySelectorAll(".wrap article");
+const prev = slider.querySelector(".prev");
+const next = slider.querySelector(".next");
+const speed = 1000;
+const btns =slider.querySelectorAll(".btns li");
+
+let enableClick = true;
+
+
+
+init();
+
+next.addEventListener("click", (e)=>{
+    e.preventDefault();
+    if(enableClick){
+        nextSlide();
+        enableClick = false;
+    }
+})
+
+prev.addEventListener("click", (e)=>{
+    e.preventDefault();
+    if(enableClick){
+        prevSlide();
+        enableClick = false;
+    }
+})
+
+
+//function
+function init(){
+    wrap.style.left = "-100%";
+    wrap.prepend(wrap.lastElementChild);
+}
+
+function nextSlide(){
+    new Anim(wrap,{
+        prop : 'left',
+        value : "-200%",
+        duration : speed,
+        callback : ()=>{
+            wrap.style.left = "-100%";
+            wrap.append(wrap.firstElementChild);
+            enableClick = true;
+        }
+    })
+}
+
+function prevSlide(){
+    new Anim(wrap,{
+        prop : 'left',
+        value : "0%",
+        duration : speed,
+        callback : ()=>{
+            wrap.style.left = "-100%"
+            wrap.prepend(wrap.lastElementChild);
+            enableClick = true;
+        }
+    })
+}
+
