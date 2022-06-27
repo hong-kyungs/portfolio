@@ -7,9 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d8686bacca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="js/main.js"></script>
-    <script defer src="js/scroll.js"></script>
-    <script src="js/anime.js"></script>
+    <script defer src="js/slider.js"></script>
+    <script defer src="js/anime.js"></script>
 </head>
 <body>
     <header id="header">
@@ -65,32 +67,21 @@
                 <img src="img/pic5.jpg" alt="양손 가득 담은 포도사진">
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
-
-            <ul>
-                <li class="on">
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">video</a>
-                </li>
-                <li>
-                    <a href="#">product</a>
-                </li>
-                <li>
-                    <a href="#">community</a>
-                </li>
-            </ul>
         </div>
         
     </section>
 
     <section id="video" class="section">
         <!-- wine-making 영상 -  -->
-        <div class="inner">
-            <article class="hidden_vid">
-
-            </article>
-            <article class="play_img">
+        <div class="vid_inner">
+            <div class="txt">
+                <h1>GALLERY</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <figure>
+                <video src="img/winery.mp4" autoplay muted loop></video>
+            </figure>
+            <!-- <article class="play_img">
                 <div class="vid_img">
                     <img src="img/pic6.jpg" alt="포도밭사진">
                 </div>
@@ -99,35 +90,44 @@
                 </a>
                 <h2>WINEMAKING</h2>
                 <p>Lorem ipsum dolor sit.</p>
-            </article>
+            </article> -->
         </div>
     </section>
 
     <section id="product" class="section">
         <div class="inner">
             <h1>OUR WINES</h1>
-            <P>RED / WHITE / ROSE</P>
+            <P>Lorem, ipsum dolor sit amet consectetur adipisicing.</P>
             <div class="wrap">
                 <article>
-                    <img src="img/p_img1.jpg" alt="레드와인">
-                    <div class="img_txt">
-                        <h3>RED WINE</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                    <div class="img">
+                        <img src="img/p_img1.jpg" alt="레드와인">
+                        <div class="img_txt">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, eveniet.</p>
+                            <a href="#">view more</a>
+                        </div>
                     </div>
+                    <p>RED WINE</p>
                 </article>
                 <article>
-                    <img src="img/p_img2.jpg" alt="화이트와인">
-                    <div class="img_txt">
-                        <h3>WHITE WINE</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                    <div class="img">
+                        <img src="img/p_img2.jpg" alt="화이트와인">
+                        <div class="img_txt">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, eveniet.</p>
+                            <a href="#">view more</a>
+                        </div>
                     </div>
+                    <p>WHITE WINE</p>
                 </article>
                 <article>
-                    <img src="img/p_img3.jpg" alt="로제와인">
-                    <div class="img_txt">
-                        <h3>ROSE WINE</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                    <div class="img">
+                        <img src="img/p_img3.jpg" alt="로제와인">
+                        <div class="img_txt">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, eveniet.</p>
+                            <a href="#">view more</a>
+                        </div>
                     </div>
+                    <p>ROSE WINE</p>
                 </article>
                 
             </div>
@@ -138,9 +138,9 @@
 
     <section id="community" class="section">
         <!-- swiper/slide 적용 -->
-        <div class="com_inner">
-            <div class="wrap">
-                <article class="on">
+        <div class="com_inner swiper mySwiper">
+            <div class="wrap swiper-wrapper">
+                <article class="swiper-slide box1">
                     <div class="comment">
                         <h1>What&nbsp; Our&nbsp; Customers&nbsp; Say</h1>
                         <div class="cus_img">
@@ -150,47 +150,41 @@
                         <h3>Andrew Garfield</h3>
                     </div>
                 </article>
-                <article>
+                <article class="swiper-slide box2">
                     <div class="comment">
                         <h1>What&nbsp; Our&nbsp; Customers&nbsp; Say</h1>
                         <div class="cus_img">
                             <img src="img/people2.jpeg" alt="여자사진">
                         </div>
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ratione, sequi inventore alias facere sint eligendi consectetur suscipit ducimus, harum reiciendis ex explicabo excepturi quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis molestiae sunt, animi excepturi facere reiciendis aliquid ea molestias. Commodi, illo!</h2>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ratione, sequi inventore alias facere sint Commodi, illo!</h2>
                         <h3>Emma Watson</h3>
                     </div>
                 </article>
-                <article>
+                <article class="swiper-slide box3">
                     <div class="comment">
                         <h1>What&nbsp; Our&nbsp; Customers&nbsp; Say</h1>
                         <div class="cus_img">
                             <img src="img/people3.jpeg" alt="남자사진">
                         </div>
-                        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur reiciendis veniam sequi ad cumque corrupti maiores, sunt quo aspernatur nisi?</h2>
+                        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur reiciendis veniam sequi ad cumque corrupti
+                        </h2>
                         <h3>Zac Efron</h3>
                     </div>
                 </article>
             </div>
-            
-            <a href="#" class="prev">
-                <i class="fa-solid fa-arrow-left-long"></i>
-            </a>
-            <a href="#" class="next">
-                <i class="fa-solid fa-arrow-right-long"></i>
-            </a>
 
-            <ul class="btns">
-                <li class="on"><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
         </div>
     </section>
 
     <footer id="footer" class="section">
         <div class="inner">
             <h1>GREEN OAK</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad qui sint eos aliquid reprehenderit recusandae quasi doloremque error? Magnam obcaecati, molestiae quibusdam cupiditate inventore harum voluptas itaque quod nesciunt reprehenderit? <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad qui sint eos  <br>
             <strong>We are waiting right for you.</strong>   
             </p>
             

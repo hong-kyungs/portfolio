@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Spectral&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Serif+Pro:wght@300&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -64,7 +64,7 @@ body #header .inner .header_nav h1 {
   transform: translate(-50%, -50%);
 }
 body #header .inner .header_nav h1 a {
-  font: bold 30px/1 "Alegreya Sans SC";
+  font: bold 30px/1 "Open Sans";
   letter-spacing: 3px;
   color: #fff;
 }
@@ -80,7 +80,7 @@ body #header .inner .header_nav .menuWeb #gnb {
 body #header .inner .header_nav .menuWeb #gnb li a {
   display: block;
   padding: 12px 50px;
-  font: bold 16px/1 "Alegreya Sans SC";
+  font: bold 16px/1 "Open Sans";
   letter-spacing: 1.3px;
   color: #fff;
 }
@@ -112,7 +112,7 @@ body #header .inner .header_nav .menuWeb .util li {
   margin-left: 30px;
 }
 body #header .inner .header_nav .menuWeb .util li a {
-  font: 16px/1 "Alegreya Sans SC";
+  font: 16px/1 "Open Sans";
   color: #fff;
 }
 body #header .inner .txt {
@@ -120,16 +120,16 @@ body #header .inner .txt {
   height: 75vh;
   margin: 0 auto;
   position: relative;
-  padding: 30px 200px;
+  padding: 100px 200px;
 }
 body #header .inner .txt h2 {
-  font: 50px/1 "Alegreya Sans SC";
+  font: 40px/1 "Source Serif Pro";
   color: #fff;
   margin-top: 150px;
   text-align: center;
 }
 body #header .inner .txt p {
-  font: 20px/1.4 "Alegreya Sans SC";
+  font: 20px/1.4 "Source Serif Pro";
   color: #fff;
   margin-top: 30px;
   text-align: center;
@@ -139,7 +139,7 @@ body #header .inner .txt a {
   width: 300px;
   height: 40px;
   border: 2px solid #b2c5c1;
-  font: bold 14px/40px "Alegreya Sans SC";
+  font: bold 14px/40px "open sans";
   color: #fff;
   letter-spacing: 3px;
   text-align: center;
@@ -171,18 +171,18 @@ body #introduction .inner div {
   padding: 150px 0;
 }
 body #introduction .inner .introduction_txt h2 {
-  font: bold 50px/1 "Spectral";
+  font: bold 50px/1 "Source Serif Pro";
   color: #222;
   letter-spacing: 5px;
   margin-bottom: 10px;
 }
 body #introduction .inner .introduction_txt h3 {
-  font: bold 20px/1 "Spectral";
+  font: bold 20px/1 "Source Serif Pro";
   color: #476257;
   margin-bottom: 30px;
 }
 body #introduction .inner .introduction_txt p {
-  font: normal 17px/1.3 "Spectral";
+  font: normal 17px/1.3 "Source Serif Pro";
   color: #666;
 }
 body #introduction .inner .introduction_txt a {
@@ -191,7 +191,7 @@ body #introduction .inner .introduction_txt a {
   height: 40px;
   background: #476257;
   margin-top: 30px;
-  font: 14px/40px "Spectral";
+  font: 14px/40px "open sans";
   color: #fff;
   letter-spacing: 2px;
   text-align: center;
@@ -207,7 +207,7 @@ body #introduction .inner .introduction_img img {
   transition: 0.5s;
 }
 body #introduction .inner .introduction_img p {
-  font: normal 15px/1 "Spectral";
+  font: normal 15px/1 "Source Serif Pro";
   color: #666;
   text-align: end;
 }
@@ -215,119 +215,52 @@ body #introduction .inner :hover img {
   transform: rotateX(0deg);
   opacity: 1;
 }
-body #introduction .inner ul {
-  position: fixed;
-  z-index: 5;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-body #introduction .inner ul li {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #999;
-  margin-bottom: 5vh;
-  cursor: pointer;
-  transition: 0.5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body #introduction .inner ul li a {
-  font: bold 14px/1 "spectral";
-  color: #222;
-}
-body #introduction .inner ul li.on {
-  background: #476257;
-}
-body #introduction .inner ul li.on a {
-  color: #fff;
-}
 body #video {
   width: 100%;
   padding: 30px;
-  background: #F0E8E4;
+  background: #f5f5f5;
 }
-body #video .inner {
+body #video .vid_inner {
   width: 100%;
   position: relative;
 }
-body #video .inner .hidden_vid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-body #video .inner .play_img {
-  z-index: 0;
-}
-body #video .inner article {
-  width: 100%;
-  height: 80vh;
+body #video .vid_inner .txt {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-body #video .inner article .pic {
+body #video .vid_inner .txt h1 {
+  font: bold 30px/1 "open sans";
+  color: #a18870;
+  margin-bottom: 20px;
+}
+body #video .vid_inner .txt h1::after {
+  content: "";
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 1px;
+  background: #476257;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-body #video .inner article .vid_img {
-  width: 100%;
-  height: 100%;
+body #video .vid_inner .txt p {
+  font: bold 17px/1 "open sans";
+  color: #8a8a8a;
+  margin-bottom: 20px;
 }
-body #video .inner article .vid_img img {
+body #video .vid_inner figure {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+}
+body #video .vid_inner figure video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(60%);
-}
-body #video .inner article i {
-  font-size: 20px;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px;
-  border: 2px solid #fff;
-  border-radius: 100%;
-}
-body #video .inner article h2 {
-  font: bold 25px/1 "Spectral";
-  letter-spacing: 3px;
-  color: #fff;
-  position: absolute;
-  bottom: 10vh;
-  left: 5vh;
-}
-body #video .inner article P {
-  font: 17px/1 "Spectral";
-  color: #b2c5c1;
-  position: absolute;
-  bottom: 6vh;
-  left: 5vh;
-}
-body #video .inner figure.pop {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  overflow: hidden;
-  padding: 15vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body #video .inner figure.pop .btnClose {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  color: #fff;
-  cursor: pointer;
 }
 body #product {
   width: 100%;
@@ -340,10 +273,10 @@ body #product .inner {
   position: relative;
 }
 body #product .inner h1 {
-  font: bold 35px/1 "Spectral";
-  color: #222;
+  font: bold 30px/1 "open sans";
+  color: #a18870;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
 }
 body #product .inner h1::after {
@@ -358,58 +291,77 @@ body #product .inner h1::after {
   transform: translateX(-50%);
 }
 body #product .inner > p {
-  font: bold 17px/1 "Spectral";
-  color: #476257;
-  margin-bottom: 100px;
+  font: bold 17px/1 "Open Sans";
+  color: #8a8a8a;
+  margin-top: 20px;
+  margin-bottom: 50px;
   text-align: center;
 }
 body #product .inner .wrap {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 body #product .inner .wrap article {
-  width: 280px;
-  height: 400px;
+  width: 275px;
   position: relative;
   overflow: hidden;
+  margin-right: 1vw;
 }
-body #product .inner .wrap article img {
+body #product .inner .wrap article .img {
+  width: 100%;
+  height: 335px;
+  overflow: hidden;
+}
+body #product .inner .wrap article .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-body #product .inner .wrap article .img_txt {
-  width: 100%;
-  height: 200px;
-  background: rgba(178, 197, 193, 0.5);
-  position: absolute;
-  border-top: 3px solid #476257;
-  bottom: 0;
-  left: 0;
-  transform: translateY(100%);
   transition: 0.5s;
 }
-body #product .inner .wrap article .img_txt h3 {
-  font: bold 22px/1 "Spectral";
-  color: #555;
-  padding: 60px 0 20px 20px;
+body #product .inner .wrap article .img .img_txt {
+  width: 100%;
+  height: 335px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
 }
-body #product .inner .wrap article .img_txt > p {
-  font: bold 14px/1 "Spectral";
-  color: #555;
-  padding: 0 20px;
+body #product .inner .wrap article .img .img_txt p {
+  font: 15px/1.3 "open sans";
+  color: #fff;
 }
-body #product .inner .wrap article:hover img {
-  filter: grayscale(60%);
+body #product .inner .wrap article .img .img_txt a {
+  display: block;
+  width: 50%;
+  height: 40px;
+  border: 1px solid #fff;
+  font: 15px/40px "open sans";
+  color: #fff;
+  text-align: center;
 }
-body #product .inner .wrap article:hover .img_txt {
-  transform: translateY(0%);
+body #product .inner .wrap article .img:hover img {
+  transform: scale(1.2);
+}
+body #product .inner .wrap article .img:hover .img_txt {
+  background: #222;
+  opacity: 0.7;
+}
+body #product .inner .wrap article p {
+  font: bold 15px/1 "Open sans";
+  color: #222;
+  text-align: center;
+  margin: 20px 0;
 }
 body #community {
   width: 100%;
   padding: 30px;
-  background: #F0E8E4;
+  background: #f5f5f5;
 }
 body #community .com_inner {
   width: 100%;
@@ -419,86 +371,50 @@ body #community .com_inner {
   position: relative;
   overflow: hidden;
 }
-body #community .com_inner .wrap {
-  width: 300%;
+body #community .com_inner .wrap, body #community .com_inner .swiper {
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-body #community .com_inner .wrap article {
-  width: 33.333%;
-  height: 100%;
-  float: left;
-  padding: 10vh 15vw;
-}
-body #community .com_inner .wrap article .comment {
+body #community .com_inner .wrap article, body #community .com_inner .wrap .swiper-wrapper, body #community .com_inner .swiper article, body #community .com_inner .swiper .swiper-wrapper {
   width: 100%;
   height: 100%;
+  padding: 7vh 15vw;
+}
+body #community .com_inner .wrap article .comment, body #community .com_inner .wrap article .swiper-slide, body #community .com_inner .wrap .swiper-wrapper .comment, body #community .com_inner .wrap .swiper-wrapper .swiper-slide, body #community .com_inner .swiper article .comment, body #community .com_inner .swiper article .swiper-slide, body #community .com_inner .swiper .swiper-wrapper .comment, body #community .com_inner .swiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  padding: 0 10vw;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body #community .com_inner .wrap article .comment h1 {
-  font: bold 30px/1 "Alegreya Sans SC";
+body #community .com_inner .wrap article .comment h1, body #community .com_inner .wrap article .swiper-slide h1, body #community .com_inner .wrap .swiper-wrapper .comment h1, body #community .com_inner .wrap .swiper-wrapper .swiper-slide h1, body #community .com_inner .swiper article .comment h1, body #community .com_inner .swiper article .swiper-slide h1, body #community .com_inner .swiper .swiper-wrapper .comment h1, body #community .com_inner .swiper .swiper-wrapper .swiper-slide h1 {
+  font: bold 30px/1 "Open Sans";
   margin: 15vh 0 10vh;
+  color: #a18870;
 }
-body #community .com_inner .wrap article .comment .cus_img {
-  width: 80px;
-  height: 80px;
+body #community .com_inner .wrap article .comment .cus_img, body #community .com_inner .wrap article .swiper-slide .cus_img, body #community .com_inner .wrap .swiper-wrapper .comment .cus_img, body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img, body #community .com_inner .swiper article .comment .cus_img, body #community .com_inner .swiper article .swiper-slide .cus_img, body #community .com_inner .swiper .swiper-wrapper .comment .cus_img, body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img {
+  width: 100px;
+  height: 100px;
   margin-bottom: 5vh;
 }
-body #community .com_inner .wrap article .comment .cus_img img {
+body #community .com_inner .wrap article .comment .cus_img img, body #community .com_inner .wrap article .swiper-slide .cus_img img, body #community .com_inner .wrap .swiper-wrapper .comment .cus_img img, body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img img, body #community .com_inner .swiper article .comment .cus_img img, body #community .com_inner .swiper article .swiper-slide .cus_img img, body #community .com_inner .swiper .swiper-wrapper .comment .cus_img img, body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
-body #community .com_inner .wrap article .comment h2 {
-  font: 18px/1 "spectral";
+body #community .com_inner .wrap article .comment h2, body #community .com_inner .wrap article .swiper-slide h2, body #community .com_inner .wrap .swiper-wrapper .comment h2, body #community .com_inner .wrap .swiper-wrapper .swiper-slide h2, body #community .com_inner .swiper article .comment h2, body #community .com_inner .swiper article .swiper-slide h2, body #community .com_inner .swiper .swiper-wrapper .comment h2, body #community .com_inner .swiper .swiper-wrapper .swiper-slide h2 {
+  font: 18px/1 "Source Serif Pro";
   text-align: center;
   margin-bottom: 5vh;
 }
-body #community .com_inner .wrap article .comment h3 {
-  font: 14px/1 "Alegreya Sans SC";
-}
-body #community .com_inner .prev {
-  position: absolute;
-  left: 10vw;
-  top: 50%;
-  font-size: 30px;
-  color: #616161;
-}
-body #community .com_inner .next {
-  position: absolute;
-  right: 10vw;
-  top: 50%;
-  font-size: 30px;
-  color: #616161;
-}
-body #community .com_inner ul {
-  position: absolute;
-  bottom: 3vh;
-  left: 50%;
-  transform: translateX(-50%);
-}
-body #community .com_inner ul li {
-  float: left;
-  margin-right: 1vw;
-}
-body #community .com_inner ul li:last-of-type {
-  margin-right: 0;
-}
-body #community .com_inner ul li a {
-  display: block;
-  width: 2vw;
-  height: 2px;
-  background: #616161;
-}
-body #community .com_inner ul li.on a {
-  width: 3vw;
-  background: #ff94c2;
+body #community .com_inner .wrap article .comment h3, body #community .com_inner .wrap article .swiper-slide h3, body #community .com_inner .wrap .swiper-wrapper .comment h3, body #community .com_inner .wrap .swiper-wrapper .swiper-slide h3, body #community .com_inner .swiper article .comment h3, body #community .com_inner .swiper article .swiper-slide h3, body #community .com_inner .swiper .swiper-wrapper .comment h3, body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
+  font: 14px/1 "Open Sans";
 }
 body #footer {
   width: 100%;
@@ -514,13 +430,13 @@ body #footer .inner {
   align-items: center;
 }
 body #footer .inner h1 {
-  font: bold 30px/1 "Alegreya Sans SC";
+  font: bold 30px/1 "Open sans";
   letter-spacing: 3px;
   color: #fff;
   margin-bottom: 2vh;
 }
 body #footer .inner > p {
-  font: 16px/1.3 "Alegreya Sans SC";
+  font: 14px/1.3 "Source Serif Pro";
   padding: 0 10vw;
   text-align: center;
   color: #fff;
@@ -549,13 +465,13 @@ body #footer .inner .sns li:first-of-type a {
   margin-left: 0;
 }
 body #footer .inner address {
-  font: 14px/1.2 "Alegreya Sans SC";
+  font: 14px/1.2 "open sans";
   margin-bottom: 1vh;
   color: #333;
   text-align: center;
 }
 body #footer .inner span {
-  font: 14px/1 "Alegreya Sans SC";
+  font: 14px/1 "open sans";
   color: #333;
 }
 
