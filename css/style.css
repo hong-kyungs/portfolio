@@ -1,4 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Serif+Pro:wght@300&display=swap");
+body {
+  width: 100%;
+  height: 100%;
+}
+body #header_sub {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+body #header_sub .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  height: 10vh;
+}
+body #header_sub .inner h1 {
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+  left: 0;
+}
+body #header_sub .inner h1 a {
+  font: bold 28px/1 "open sans";
+  color: #476257;
+}
+body #header_sub .inner .menuWeb {
+  background: lightgoldenrodyellow;
+}
+body #header_sub .inner .menuWeb #gnb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body #header_sub .inner .menuWeb #gnb li {
+  float: left;
+}
+body #header_sub .inner .menuWeb #gnb li a {
+  display: block;
+  padding: 10px 15px;
+  font: 16px/1 "open sans";
+  color: #222;
+}
+body #header_sub .inner .menuWeb .util {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body #header_sub .inner .menuWeb .util li {
+  float: left;
+}
+body #footer {
+  width: 100%;
+  background: #476257;
+}
+body #footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 2vw 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #footer .inner h1 {
+  font: bold 30px/1 "Open sans";
+  letter-spacing: 3px;
+  color: #fff;
+  margin-bottom: 2vh;
+}
+body #footer .inner > p {
+  font: 14px/1.3 "Source Serif Pro";
+  padding: 0 10vw;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3vh;
+}
+body #footer .inner > p strong {
+  font-size: 18px;
+}
+body #footer .inner .sns {
+  display: flex;
+  margin-bottom: 3vh;
+}
+body #footer .inner .sns li a {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #476257;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #footer .inner .sns li:first-of-type a {
+  margin-left: 0;
+}
+body #footer .inner address {
+  font: 14px/1.2 "open sans";
+  margin-bottom: 1vh;
+  color: #333;
+  text-align: center;
+}
+body #footer .inner span {
+  font: 14px/1 "open sans";
+  color: #333;
+}
+
 * {
   margin: 0px;
   padding: 0px;
