@@ -151,9 +151,106 @@ body #header .inner .txt a {
 body #header .inner .txt a:hover {
   background-color: #b2c5c1;
 }
+body #header .inner .btnCall {
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  position: absolute;
+  top: 3vh;
+  right: 30px;
+  display: none;
+}
+body #header .inner .btnCall span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #37474f;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  text-indent: -9990px;
+}
+body #header .inner .btnCall::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #37474f;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body #header .inner .btnCall::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #37474f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+body #header .inner .btnCall.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+body #header .inner .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+body #header .inner .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+body #header .inner .menuMo {
+  width: 270px;
+  height: 100vh;
+  background: #37474f;
+  position: fixed;
+  top: 0;
+  left: -270px;
+  z-index: 10;
+  padding: 35px 30px;
+  transition: 0.5s;
+}
+body #header .inner .menuMo.on {
+  left: 0;
+}
+body #header .inner .menuMo h1 {
+  position: absolute;
+  bottom: 30px;
+  border-bottom: 1px solid #aaa;
+  padding: 20px 0;
+  border-bottom: 1px solid #aaa;
+}
+body #header .inner .menuMo h1 a {
+  display: block;
+  font: bold 24px/1 "open sans";
+  color: #fff;
+  margin-bottom: 10px;
+}
+body #header .inner .menuMo h1 span {
+  display: block;
+  font: bold 14px/1 "open sans";
+  color: #aaa;
+}
+body #header .inner .menuMo #gnbMo {
+  margin-top: 30px;
+}
+body #header .inner .menuMo #gnbMo li a {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  font: bold 16px/1 "open sans";
+  color: #888;
+  text-align: center;
+  border-bottom: 1px solid #666;
+}
 body #introduction {
   width: 100%;
-  height: 100vh;
   background: #F0E8E4;
   overflow: hidden;
 }
@@ -202,7 +299,7 @@ body #introduction .inner .introduction_img img {
   height: 350px;
   object-fit: cover;
   transform-origin: top;
-  transform: rotateX(90deg);
+  transform: rotateY(200deg) translateY(100px);
   opacity: 0;
   transition: 0.5s;
 }
@@ -211,9 +308,9 @@ body #introduction .inner .introduction_img p {
   color: #666;
   text-align: end;
 }
-body #introduction .inner :hover img {
-  transform: rotateX(0deg);
+body #introduction.on .inner .introduction_img img {
   opacity: 1;
+  transform: rotateY(0deg) translateY(0px);
 }
 body #video {
   width: 100%;
@@ -234,6 +331,7 @@ body #video .vid_inner .txt h1 {
   font: bold 30px/1 "open sans";
   color: #a18870;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 body #video .vid_inner .txt h1::after {
   content: "";
@@ -247,9 +345,9 @@ body #video .vid_inner .txt h1::after {
   transform: translateX(-50%);
 }
 body #video .vid_inner .txt p {
-  font: bold 17px/1 "open sans";
+  font: bold 15px/1 "open sans";
   color: #8a8a8a;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 body #video .vid_inner figure {
   width: 100%;
@@ -262,6 +360,18 @@ body #video .vid_inner figure video {
   height: 100%;
   object-fit: cover;
 }
+body #video .vid_inner a {
+  display: block;
+  width: 80px;
+  padding: 5px;
+  font: bold 15px/1 "open sans";
+  color: #a18870;
+  border-bottom: 1px solid #a18870;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
 body #product {
   width: 100%;
   padding: 100px 0;
@@ -272,14 +382,20 @@ body #product .inner {
   margin: 0 auto;
   position: relative;
 }
-body #product .inner h1 {
+body #product .inner .inner_txt {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #product .inner .inner_txt h1 {
   font: bold 30px/1 "open sans";
   color: #a18870;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
-body #product .inner h1::after {
+body #product .inner .inner_txt h1::after {
   content: "";
   display: block;
   width: 300px;
@@ -290,12 +406,10 @@ body #product .inner h1::after {
   left: 50%;
   transform: translateX(-50%);
 }
-body #product .inner > p {
-  font: bold 17px/1 "Open Sans";
+body #product .inner .inner_txt > p {
+  font: bold 15px/1 "Open Sans";
   color: #8a8a8a;
-  margin-top: 20px;
   margin-bottom: 50px;
-  text-align: center;
 }
 body #product .inner .wrap {
   width: 100%;
@@ -307,6 +421,18 @@ body #product .inner .wrap article {
   position: relative;
   overflow: hidden;
   margin-right: 1vw;
+  transform: translateY(100px);
+  transition: 0.5s;
+  opacity: 0;
+}
+body #product .inner .wrap article:nth-of-type(1) {
+  transition-delay: 0s;
+}
+body #product .inner .wrap article:nth-of-type(2) {
+  transition-delay: 0.2s;
+}
+body #product .inner .wrap article:nth-of-type(3) {
+  transition-delay: 0.4s;
 }
 body #product .inner .wrap article .img {
   width: 100%;
@@ -341,9 +467,13 @@ body #product .inner .wrap article .img .img_txt a {
   width: 50%;
   height: 40px;
   border: 1px solid #fff;
-  font: 15px/40px "open sans";
+  font: 15px/30px "open sans";
   color: #fff;
   text-align: center;
+}
+body #product .inner .wrap article .img .img_txt a:hover {
+  background: #fff;
+  color: #222;
 }
 body #product .inner .wrap article .img:hover img {
   transform: scale(1.2);
@@ -357,6 +487,22 @@ body #product .inner .wrap article p {
   color: #222;
   text-align: center;
   margin: 20px 0;
+}
+body #product .inner a {
+  display: block;
+  width: 80px;
+  padding: 5px;
+  font: bold 15px/1 "open sans";
+  color: #a18870;
+  border-bottom: 1px solid #a18870;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+body #product.on .inner .wrap article {
+  opacity: 1;
+  transform: translateY(0px);
 }
 body #community {
   width: 100%;
@@ -473,6 +619,214 @@ body #footer .inner address {
 body #footer .inner span {
   font: 14px/1 "open sans";
   color: #333;
+}
+
+@media screen and (max-width: 1179px) {
+  body #header::after {
+    height: 7vh;
+    opacity: 1;
+    z-index: 0;
+  }
+  body #header .inner {
+    width: 100%;
+    height: 50%;
+  }
+  body #header .inner .header_nav {
+    width: 100%;
+    height: 10vh;
+    z-index: 1;
+  }
+  body #header .inner .header_nav h1 {
+    position: absolute;
+    top: 2vh;
+    left: 30px;
+    transform: translate(0, 0);
+  }
+  body #header .inner .header_nav h1 a {
+    font: bold 25px/1 "Open Sans";
+  }
+  body #header .inner .header_nav .menuWeb {
+    display: none;
+  }
+  body #header .inner .txt {
+    width: 100%;
+    height: 90vh;
+    transform: translateY(20%);
+  }
+  body #header .inner .btnCall {
+    display: block;
+    top: 3vh;
+  }
+  body #introduction {
+    padding: 0 20px;
+  }
+  body #introduction .inner {
+    width: 100%;
+  }
+  body #introduction .inner div {
+    width: 48%;
+    height: 100%;
+    padding: 150px 0;
+  }
+  body #video .vid_inner figure {
+    height: 50vh;
+  }
+  body #product .inner {
+    width: 100%;
+  }
+  body #footer .inner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 539px) {
+  body #header {
+    height: 60%;
+  }
+  body #header::after {
+    height: 10vh;
+  }
+  body #header .inner .header_nav h1 {
+    top: 4vh;
+  }
+  body #header .inner .txt {
+    width: 100%;
+    height: 60vh;
+    padding: 20px 30px;
+  }
+  body #header .inner .txt h2 {
+    font: 24px/1 "Source Serif Pro";
+  }
+  body #header .inner .txt p {
+    font: 12px/1.4 "Source Serif Pro";
+  }
+  body #header .inner .txt a {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #b2c5c1;
+    font: bold 12px/30px "open sans";
+  }
+  body #header .inner .btnCall {
+    top: 5vh;
+  }
+  body #introduction .inner {
+    flex-wrap: wrap;
+  }
+  body #introduction .inner div {
+    width: 100%;
+    padding: 40px 10px;
+  }
+  body #introduction .inner .introduction_txt h2 {
+    font: bold 40px/1 "Source Serif Pro";
+  }
+  body #introduction .inner .introduction_txt h3 {
+    font: bold 15px/1 "Source Serif Pro";
+  }
+  body #introduction .inner .introduction_txt p {
+    font: normal 12px/1.3 "Source Serif Pro";
+  }
+  body #introduction .inner .introduction_txt a {
+    width: 100%;
+    height: 30px;
+    font: 12px/30px "open sans";
+    color: #fff;
+  }
+  body #video .vid_inner .txt h1 {
+    font: bold 24px/1 "open sans";
+  }
+  body #video .vid_inner .txt h1::after {
+    width: 200px;
+    top: 35px;
+  }
+  body #video .vid_inner .txt p {
+    font: bold 12px/1 "open sans";
+  }
+  body #video .vid_inner figure {
+    height: 40vh;
+  }
+  body #video .vid_inner a {
+    font: bold 14px/1 "open sans";
+  }
+  body #product {
+    padding: 100px 0;
+  }
+  body #product .inner {
+    width: 100%;
+  }
+  body #product .inner .inner_txt h1 {
+    font: bold 24px/1 "open sans";
+  }
+  body #product .inner .inner_txt h1::after {
+    width: 200px;
+    top: 35px;
+  }
+  body #product .inner .inner_txt > p {
+    font: bold 12px/1 "Open Sans";
+  }
+  body #product .inner .wrap {
+    flex-wrap: wrap;
+  }
+  body #product .inner .wrap article {
+    width: 300px;
+  }
+  body #product .inner .wrap article .img .img_txt {
+    padding: 30px;
+  }
+  body #product .inner a {
+    font: bold 12px/1 "open sans";
+  }
+  body #community {
+    padding: 0;
+  }
+  body #community .com_inner {
+    height: 60vh;
+  }
+  body #community .com_inner .wrap article, body #community .com_inner .wrap .swiper-wrapper, body #community .com_inner .swiper article, body #community .com_inner .swiper .swiper-wrapper {
+    padding: 0;
+  }
+  body #community .com_inner .wrap article .comment, body #community .com_inner .wrap article .swiper-slide, body #community .com_inner .wrap .swiper-wrapper .comment, body #community .com_inner .wrap .swiper-wrapper .swiper-slide, body #community .com_inner .swiper article .comment, body #community .com_inner .swiper article .swiper-slide, body #community .com_inner .swiper .swiper-wrapper .comment, body #community .com_inner .swiper .swiper-wrapper .swiper-slide {
+    padding: 0 10vw;
+  }
+  body #community .com_inner .wrap article .comment h1, body #community .com_inner .wrap article .swiper-slide h1, body #community .com_inner .wrap .swiper-wrapper .comment h1, body #community .com_inner .wrap .swiper-wrapper .swiper-slide h1, body #community .com_inner .swiper article .comment h1, body #community .com_inner .swiper article .swiper-slide h1, body #community .com_inner .swiper .swiper-wrapper .comment h1, body #community .com_inner .swiper .swiper-wrapper .swiper-slide h1 {
+    font: bold 20px/1 "Open Sans";
+    margin: 12vh 0 5vh;
+  }
+  body #community .com_inner .wrap article .comment .cus_img, body #community .com_inner .wrap article .swiper-slide .cus_img, body #community .com_inner .wrap .swiper-wrapper .comment .cus_img, body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img, body #community .com_inner .swiper article .comment .cus_img, body #community .com_inner .swiper article .swiper-slide .cus_img, body #community .com_inner .swiper .swiper-wrapper .comment .cus_img, body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img {
+    width: 50px;
+    height: 50px;
+  }
+  body #community .com_inner .wrap article .comment h2, body #community .com_inner .wrap article .swiper-slide h2, body #community .com_inner .wrap .swiper-wrapper .comment h2, body #community .com_inner .wrap .swiper-wrapper .swiper-slide h2, body #community .com_inner .swiper article .comment h2, body #community .com_inner .swiper article .swiper-slide h2, body #community .com_inner .swiper .swiper-wrapper .comment h2, body #community .com_inner .swiper .swiper-wrapper .swiper-slide h2 {
+    font: 12px/1 "Source Serif Pro";
+  }
+  body #community .com_inner .wrap article .comment h3, body #community .com_inner .wrap article .swiper-slide h3, body #community .com_inner .wrap .swiper-wrapper .comment h3, body #community .com_inner .wrap .swiper-wrapper .swiper-slide h3, body #community .com_inner .swiper article .comment h3, body #community .com_inner .swiper article .swiper-slide h3, body #community .com_inner .swiper .swiper-wrapper .comment h3, body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
+    font: 12px/1 "Open Sans";
+  }
+  body #footer .inner {
+    padding: 10px;
+  }
+  body #footer .inner h1 {
+    font: bold 24px/1 "Open sans";
+    margin-top: 2vh;
+  }
+  body #footer .inner > p {
+    display: none;
+  }
+  body #footer .inner .sns {
+    margin-bottom: 2vh;
+  }
+  body #footer .inner .sns li a {
+    width: 22px;
+    height: 22px;
+  }
+  body #footer .inner address {
+    font: 12px/1.2 "open sans";
+    margin-bottom: 1vh;
+    color: #333;
+    text-align: center;
+  }
+  body #footer .inner span {
+    font: 12px/1 "open sans";
+    color: #333;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

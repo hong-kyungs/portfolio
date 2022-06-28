@@ -12,9 +12,10 @@
     <script defer src="js/main.js"></script>
     <script defer src="js/slider.js"></script>
     <script defer src="js/anime.js"></script>
+    <script defer src="js/scroll.js"></script>
 </head>
 <body>
-    <header id="header">
+    <header id="header" class="section on">
         <!-- ui/ux활용예제 메인페이지 적용  -->
         <!-- nav 와 view more에 효과주기. -->
         <div class="inner">
@@ -29,7 +30,7 @@
                     <ul id="gnb">
                         <li><a href="#">ABOUT US</a></li>
                         <li><a href="#">PRODUCT</a></li>
-                        <li><a href="#">YOUTUBE</a></li>
+                        <li><a href="#">GALLERY</a></li>
                         <li><a href="#">COMMUNITY</a></li>
                         <li><a href="#">LOCATION</a></li>
                     </ul>
@@ -48,6 +49,25 @@
                 <p>Experience a true "korean Dream" at Winehouse and visit the first tasting room in the korea established by a green oak family.</p>
                 <a href="#">VIEW MORE</a>
             </div>
+
+            <a href="#" class="btnCall">
+                <span>메뉴호출</span>
+            </a>
+
+            <nav class="menuMo">
+                <h1>
+                    <a href="#">GREEN OAK</a>
+                    <span>The world's best winery</span>
+                </h1>
+
+                <ul id="gnbMo">
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">PRODUCT</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+                    <li><a href="#">LOCATION</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -63,7 +83,7 @@
                 <a href="#">VIEW MORE</a>
             </div>
 
-            <div class="introduction_img">
+            <div class="introduction_img scroll">
                 <img src="img/pic5.jpg" alt="양손 가득 담은 포도사진">
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
@@ -81,23 +101,16 @@
             <figure>
                 <video src="img/winery.mp4" autoplay muted loop></video>
             </figure>
-            <!-- <article class="play_img">
-                <div class="vid_img">
-                    <img src="img/pic6.jpg" alt="포도밭사진">
-                </div>
-                <a href="#">
-                    <i class="fa-solid fa-play"></i>
-                </a>
-                <h2>WINEMAKING</h2>
-                <p>Lorem ipsum dolor sit.</p>
-            </article> -->
+           <a href="#">view all</a>
         </div>
     </section>
 
     <section id="product" class="section">
         <div class="inner">
-            <h1>OUR WINES</h1>
-            <P>Lorem, ipsum dolor sit amet consectetur adipisicing.</P>
+            <div class="inner_txt">
+                <h1>OUR WINES</h1>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing.</P>
+            </div>
             <div class="wrap">
                 <article>
                     <div class="img">
@@ -131,6 +144,7 @@
                 </article>
                 
             </div>
+            <a href="#">view all</a>
 
         </div>
 
