@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "sub_page.scss";
+@import "gallery.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Serif+Pro:wght@300&display=swap');
 *{margin: 0px; padding: 0px; box-sizing: border-box;}
@@ -165,7 +166,6 @@ body{
                     position: absolute;
                     bottom: 30px; border-bottom: 1px solid #aaa;
                     padding: 20px 0;
-                    border-bottom: 1px solid #aaa;
                     a{
                         display: block; font: bold 24px/1 'open sans';
                         color: #fff; margin-bottom: 10px;

@@ -7,7 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d8686bacca.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/flickr.js"></script>
 </head> 
 <body>
     <header id="header_sub" class="section on">
@@ -67,10 +69,40 @@
         </div>
     </header>
 
-    <section class="content">
+    <section class="content gallery">
         <div class="sub_visual"></div>
         <div class="inner">
-            <!-- 컨텐츠가 들어가는 부분 -->
+            <h1>GALLERY</h1>
+
+            <div id="gallery">
+                <article id="searchBox">
+                    <input type="text" id="search" placeholder="검색어 입력">
+                    <button class="btnSearch">Search</button>
+                </article>
+
+                <div id="wrap">
+                    <img src="img/loading.gif" class="loading" alt="">
+                    <ul id="list">
+                        <!-- <li class="item">
+                            <div>
+                                <a href="큰이미지주소">
+                                    <img src="썸네일" alt="">
+                                </a>
+                                <p>이미지제목</p>
+                                <span>
+                                    <img class="profile" src="버디아이콘" alt="">
+                                    <strong>주인이름</strong> 
+                                </span>
+                            </div>
+                        </li> -->
+
+                    </ul>
+                </div>
+                <!-- <aside>
+                    <img src="큰이미지주소" alt="">
+                    <span class="close">close</span>
+                </aside> -->
+            </div>
         </div>
     </section>
 

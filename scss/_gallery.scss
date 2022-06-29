@@ -1,0 +1,86 @@
+.gallery{
+    width: 1180px; margin: 0 auto;
+    .sub_visual{
+
+    }
+    .inner{
+        h1{
+
+        }
+        #gallery{
+            width: 100%;
+            #searchBox{
+                width: 100%; padding: 50px; font-size: 0;
+                #search{
+                    width: 380px; height: 30px; border: 1px solid #a1887f;
+                    padding-left: 10px; border-radius: 3px;
+                }
+                .btnSearch{
+                    width: 80px; height: 30px;
+                    background: #a1887f;
+                    font: bold 12px/30px 'open sans'; color: #222;
+                    text-align: center;
+                    cursor: pointer; 
+                    margin-left: 10px;
+                    vertical-align: top;
+                    border-radius: 3px;
+                }
+            }
+
+            #wrap{
+                width: 100%; 
+                .loading{
+                    width: 100px;
+                    position: fixed;
+                    top: 50%; left: 50%; transform: translate(-50%, -50%);
+                    transition: 1s;
+                    display: none;
+                    &.off{
+                        opacity: 0;
+                    }
+                }
+                #list{
+                    width: 100%;
+                    opacity: 0; transform: translateY(100px); transition: 1s;
+                    &.on{
+                        opacity: 1; transform: translateY(0px);
+                    }
+                    &::after{
+                        content: ''; display: block; clear: both;
+                    }
+                    li{
+                        float: left; 
+                        width: calc(100% / 3); padding: 10px;
+                        div{
+                            width: 100%; padding: 20px;
+                            box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+                            border-radius: 5px;
+                            a{
+                                >img{
+                                    width: 100%; filter: grayscale(100%);
+                                }
+                            }
+                            p{
+                                font: 12px/1.2 'open sans'; color: #777;
+                            }
+                            span{
+                                display: flex;
+                                align-items: center;
+                                margin-top: 10px;
+                                >img{
+                                    width: 20px; height: 20px;
+                                    border-radius: 50%;
+                                    margin-right: 10px;
+                                }
+                                strong{
+                                    font: 11px/1 'arial'; color: orange;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
