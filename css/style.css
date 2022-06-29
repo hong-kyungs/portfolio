@@ -30,7 +30,7 @@ body #header_sub .inner .menuWeb #gnb {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -10%);
 }
 body #header_sub .inner .menuWeb #gnb li {
   float: left;
@@ -38,75 +38,120 @@ body #header_sub .inner .menuWeb #gnb li {
 body #header_sub .inner .menuWeb #gnb li a {
   display: block;
   padding: 10px 15px;
-  font: 16px/1 "open sans";
+  font: bold 16px/1 "open sans";
   color: #222;
 }
 body #header_sub .inner .menuWeb .util {
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
 }
 body #header_sub .inner .menuWeb .util li {
   float: left;
+  margin-left: 20px;
 }
-body #footer {
+body #header_sub .inner .menuWeb .util li a i {
+  font-size: 20px;
+  color: #A18870;
+}
+body .content {
+  width: 100%;
+  padding: 0 0 150px;
+}
+body .content .sub_visual {
+  width: 100%;
+  height: 250px;
+  background: #bbb;
+  margin-bottom: 100px;
+}
+body .content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+body #footer_sub {
   width: 100%;
   background: #476257;
 }
-body #footer .inner {
+body #footer_sub .inner {
   width: 1180px;
   margin: 0 auto;
   padding: 2vw 0;
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
 }
-body #footer .inner h1 {
-  font: bold 30px/1 "Open sans";
-  letter-spacing: 3px;
+body #footer_sub .inner .footer-logo {
+  width: 580px;
+  margin-right: 20px;
+}
+body #footer_sub .inner .footer-logo h1 {
+  font: bold 24px/1 "Open sans";
+  letter-spacing: 1px;
   color: #fff;
-  margin-bottom: 2vh;
+  margin-bottom: 20px;
 }
-body #footer .inner > p {
-  font: 14px/1.3 "Source Serif Pro";
-  padding: 0 10vw;
-  text-align: center;
+body #footer_sub .inner .footer-logo > p {
+  font: 12px/1.4 "Source Serif Pro";
   color: #fff;
-  margin-bottom: 3vh;
 }
-body #footer .inner > p strong {
-  font-size: 18px;
+body #footer_sub .inner .footer-logo > p strong {
+  font-size: 14px;
 }
-body #footer .inner .sns {
-  display: flex;
-  margin-bottom: 3vh;
+body #footer_sub .inner .footer_contact {
+  width: 280px;
+  margin-right: 20px;
 }
-body #footer .inner .sns li a {
+body #footer_sub .inner .footer_contact p {
+  font: 14px/1.2 "open sans";
+  color: #fff;
+  margin-bottom: 20px;
+}
+body #footer_sub .inner .footer_contact address > p {
+  font: 12px/1.2 "open sans";
+  margin-bottom: 10px;
+  color: #fff;
+}
+body #footer_sub .inner .footer_sns {
+  width: 280px;
+}
+body #footer_sub .inner .footer_sns p {
+  font: 14px/1.2 "open sans";
+  color: #fff;
+  margin-bottom: 20px;
+}
+body #footer_sub .inner .footer_sns li {
+  float: left;
+}
+body #footer_sub .inner .footer_sns li a {
   width: 30px;
   height: 30px;
   background: #fff;
   border-radius: 50%;
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 12px;
   color: #476257;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body #footer .inner .sns li:first-of-type a {
+body #footer_sub .inner .footer_sns li:first-of-type a {
   margin-left: 0;
 }
-body #footer .inner address {
-  font: 14px/1.2 "open sans";
-  margin-bottom: 1vh;
-  color: #333;
-  text-align: center;
+body #footer_sub .inner .copyright {
+  margin-top: 20px;
+  font: 12px/1 "Source Serif Pro";
+  color: #fff;
 }
-body #footer .inner span {
-  font: 14px/1 "open sans";
-  color: #333;
+body #footer_sub .inner::after {
+  content: "";
+  display: block;
+  width: 1180px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 25%;
+  left: 0;
 }
 
 * {
