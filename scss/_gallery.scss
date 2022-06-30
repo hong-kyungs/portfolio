@@ -5,27 +5,29 @@
     }
     .inner{
         h1{
-
+            font: 40px/1 'Source Serif Pro'; color: #555;
+            margin-bottom: 50px;
+            text-align: center;
         }
         #gallery{
             width: 100%;
-            #searchBox{
-                width: 100%; padding: 50px; font-size: 0;
-                #search{
-                    width: 380px; height: 30px; border: 1px solid #a1887f;
-                    padding-left: 10px; border-radius: 3px;
-                }
-                .btnSearch{
-                    width: 80px; height: 30px;
-                    background: #a1887f;
-                    font: bold 12px/30px 'open sans'; color: #222;
-                    text-align: center;
-                    cursor: pointer; 
-                    margin-left: 10px;
-                    vertical-align: top;
-                    border-radius: 3px;
-                }
-            }
+            // #searchBox{
+            //     width: 100%; padding: 50px; font-size: 0;
+            //     #search{
+            //         width: 380px; height: 30px; border: 1px solid #a1887f;
+            //         padding-left: 10px; border-radius: 3px;
+            //     }
+            //     .btnSearch{
+            //         width: 80px; height: 30px;
+            //         background: #a1887f;
+            //         font: bold 12px/30px 'open sans'; color: #222;
+            //         text-align: center;
+            //         cursor: pointer; 
+            //         margin-left: 10px;
+            //         vertical-align: top;
+            //         border-radius: 3px;
+            //     }
+            // }
 
             #wrap{
                 width: 100%; 
@@ -34,7 +36,6 @@
                     position: fixed;
                     top: 50%; left: 50%; transform: translate(-50%, -50%);
                     transition: 1s;
-                    display: none;
                     &.off{
                         opacity: 0;
                     }
@@ -57,7 +58,8 @@
                             border-radius: 5px;
                             a{
                                 >img{
-                                    width: 100%; filter: grayscale(100%);
+                                    width: 100%; 
+                                    // filter: grayscale(100%);
                                 }
                             }
                             p{
@@ -68,12 +70,12 @@
                                 align-items: center;
                                 margin-top: 10px;
                                 >img{
-                                    width: 20px; height: 20px;
+                                    width: 30px; height: 30px;
                                     border-radius: 50%;
                                     margin-right: 10px;
                                 }
                                 strong{
-                                    font: 11px/1 'arial'; color: orange;
+                                    font: 11px/1 'arial'; color: #ff4081;
                                 }
                             }
                         }

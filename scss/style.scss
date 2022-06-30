@@ -2,6 +2,7 @@
 @import "sub_page.scss";
 @import "gallery.scss";
 @import "validation.scss";
+@import "department.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Serif+Pro:wght@300&display=swap');
 *{margin: 0px; padding: 0px; box-sizing: border-box;}
@@ -185,6 +186,21 @@ body{
                             color: #888; text-align: center;
                             border-bottom: 1px solid #666;
                         }
+                    }
+                }
+            }
+            .scroll_to_top{
+                position: relative;
+                .scroll_btn{
+                    position: fixed; bottom: 40px; right: 25px; z-index: 20;
+                    width: 50px; height: 50px; background: rgb(178, 197, 193, 0.8);
+                    border-radius: 50%; 
+                    cursor: pointer;
+                    display: flex; justify-content: center;
+                    align-items: center;
+                    visibility: hidden;
+                    i{
+                        font-size: 25px; color: #F0E8E4;
                     }
                 }
             }
@@ -393,41 +409,7 @@ body{
                         text-align: center;
                         margin: 20px 0;
                     }
-                    // .img_txt{
-                    //     width: 100%; height: 200px;
-                    //     background: rgba(178, 197, 193,0.5);
-                    //     position: absolute;
-                    //     border-top: 3px solid #476257;
-                    //     bottom: 0; left: 0;
-                    //     transform: translateY(100%);
-                    //     transition: 0.5s;
-
-                    //     h3{
-                    //         font: bold 22px/1 'Open Sans'; color: #555;
-                    //         padding: 60px 0 20px 20px; 
-                    //     }
-                    //     >p{
-                    //         font: bold 14px/1 'Open Sans'; color: #555;
-                    //         padding: 0 20px;
-                    //     }
-
-                    // }
-                    // &:hover img{
-                    //     filter: grayscale(60%);
-                    // }
-                    // &:hover .img_txt{
-                    //     transform: translateY(0%);
-                    // }
                 }
-            }
-            a{
-                display: block; width: 80px; padding: 5px;
-                font: bold 15px/1 'open sans';
-                color: #a18870;
-                border-bottom: 1px solid #a18870;
-                text-align: center;
-                margin-top: 30px; margin-left: 50%;
-                transform: translateX(-50%);
             }
         }
         &.on .inner .wrap article{
@@ -539,6 +521,8 @@ body{
             }
         }
     }
+
+
 }
 
 //tablet 구간

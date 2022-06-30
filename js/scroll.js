@@ -19,3 +19,26 @@ window.addEventListener("scroll",()=>{
         }
     })
 })
+
+// scroll to top
+const scroll_btn = document.querySelector(".scroll_btn");
+
+window.addEventListener("scroll",()=>{
+    btnvisibility();
+})
+
+scroll_btn.addEventListener("click", ()=>{
+    window.scrollTo({
+        top : 0,
+        behavior : "smooth"
+    });
+});
+
+function btnvisibility (){
+    if(window.scrollY > 100 || window.pageYOffset > 100){
+        scroll_btn.style.visibility = "visible";
+    } else {
+        scroll_btn.style.visibility = "hidden";
+    }
+};
+

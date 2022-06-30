@@ -20,14 +20,14 @@ const method1 = "flickr.interestingness.getList";
 const method2 = "flickr.photos.search";
 const key = "1410239e47f32f3f403f70fd3c998b38";
 const per_page = 20;
-const url=  `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1`;
+const url=  `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=vineyard&privacy_filter=1`;
 
 callData(url);
 
 function callData(url){
     fetch(url)
     .then(data=>{
-       return data.json();
+        return data.json();
     })
     .then((json)=>{
         let items = json.photos.photo;
@@ -53,18 +53,18 @@ function createList(items){
 
         htmls += `
                 <li class="item">
-                <div>
-                    <a href="${imgSrcBig}">
-                        <img src="${imgSrc}" class="thumb" alt="">
-                    </a>
-                    <p>${data.title}</p>
-                    <span>
-                    <img class="profile" src="http://farm${data.farm}.staticflickr.com/${data.server}/buddyicons/${data.owner}.jpg" alt="">
-                    <strong>${data.owner}</strong> 
-                    </span>
-                </div>
-            </li>
-        `
+                    <div>
+                        <a href="${imgSrcBig}">
+                            <img src="${imgSrc}" class="thumb" alt="">
+                        </a>
+                        <p>${data.title}</p>
+                        <span>
+                            <img class="profile" src="http://farm${data.farm}.staticflickr.com/${data.server}/buddyicons/${data.owner}.jpg" alt="">
+                            <strong>${data.owner}</strong> 
+                        </span>
+                    </div>
+                </li>
+                    `
     })
 
     frame.innerHTML = htmls;
@@ -79,6 +79,16 @@ function delayLoading(){
             count++;
 
             if(count == len) isoLayout();
+        }
+
+        let thumb = el.closest(".item").querySelector(".thumb"); 
+        thumb.onerror = e =>{
+            e.currentTarget.closest(".item").querySelector(".thumb").setAttribute("src", "img/pic6.jpg"); 
+        }
+
+        let profile = el.closest(".item").querySelector(".profile"); 
+        profile.onerror = e =>{
+            e.currentTarget.closest(".item").querySelector(".profile").setAttribute("src", "https://www.flickr.com/images/buddyicon.gif");
         }
     }
 }
