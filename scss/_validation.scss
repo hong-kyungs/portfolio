@@ -1,0 +1,65 @@
+table{border-collapse: collapse;}
+.hidden{position: absolute; opacity: 0; left: -9999px;}
+
+.inner{
+    width: 100%; padding: 10px 0;
+    .join{
+        width: 1180px; margin: 0 auto;
+        .join_inner{
+            width: 100%;
+            h1{
+                font: 40px/1 'Source Serif Pro'; color: #555;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            table{
+                width: 100%; 
+                border-top: 2px solid #333;
+                border-bottom: 2px solid #333;
+                th,td{
+                    border-bottom: 1px solid #ddd;
+                    padding: 15px 25px;
+                }
+                th{
+                    width: 30%;
+                    input[type=reset], input[type=submit]{
+                        width: 20%; height: 40px;
+                        border: 1px solid #333;
+                        margin: 10px;
+                        font: bold 14px/40px 'open sans';
+                        color: #555;
+                        letter-spacing: 2px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        transition: 1s;
+                        &:hover{
+                            background: #333; color: #fff;
+                        }
+                    }
+                }
+                td{
+                    border-left: 1px solid #aaa;
+                    input[type=text], input[type=password], select{
+                        width: 50%; background: rgba(0,0,0,0.03);
+                        padding: 10px;
+                        border: 1px solid #aaa;
+                    }
+                    input[type=radio], input[type=checkbox]{
+                        margin-right: 30px;
+                    }
+                    textarea{
+                        resize: none;
+                        width: 70%; height: 150px;
+                        background: rgba(0,0,0,0.03);
+                        padding: 10px;
+                        border: 1px solid #aaa;
+                    }
+                }
+                p{
+                    font: 11px/1 '맑은 고딕';
+                    color: lightcoral; margin-top: 5px;
+                }
+            }
+        }
+    }
+}
