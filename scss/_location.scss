@@ -1,0 +1,33 @@
+.location{
+    width: 100%;
+        .branch{
+            width: 100%;
+            li{
+                float: left;
+                width: calc(100% / 3); 
+                a{
+                    display: block;
+                    width: 100%; height: 50px;
+                    font: bold 15px/50px 'open sans'; color: #37474f;
+                    border: 1px solid #555;
+                    text-align: center;
+                }
+                &:nth-of-type(1) a,
+                &:nth-of-type(2) a{
+                border-right: 0;
+                }
+                &.on a{
+                    background: #37474f; color: #fff;
+                }
+            }
+        }
+        #map{
+            width: 100%; height: 500px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+        p{
+            font: bold 20px/1 'open sans'; color: #37474f;
+        }
+    
+}

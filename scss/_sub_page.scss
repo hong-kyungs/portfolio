@@ -118,6 +118,11 @@ body{
         }
         .inner{
             width: 1180px; margin: 0 auto; min-height: 500px;
+            h1{
+                font: 40px/1 'Source Serif Pro'; color: #555;
+                margin-bottom: 50px;
+                text-align: center;
+            }
         }
     }
 
