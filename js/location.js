@@ -15,17 +15,17 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 
 var markerOptions =[
     {
-        title : "Main",
+        title : "headquater",
         latlng : new kakao.maps.LatLng(37.5101935, 127.0585824),
         button : branch_btns[0]
     },
     {
-        title : "Gyunggi",
+        title : "branch1",
         latlng : new kakao.maps.LatLng(37.624699, 127.3552654),
         button : branch_btns[1]
     },
     {
-        title : "Gangneung",
+        title : "branch2",
         latlng : new kakao.maps.LatLng(37.6960049, 128.8918872),
         button : branch_btns[2]
     }
@@ -55,6 +55,14 @@ for(let i = 0; i < markerOptions.length; i++){
     }
 }
 
+setDraggable(drag);
+function setDraggable(draggable){
+    map.setDraggable(draggable);
+}
+setZoomable(zoom);
+function setZoomable(zoomable){
+    map.setDraggable(zoomable);
+}
 
 function moveTo(target){
     var moveLatLon = target;

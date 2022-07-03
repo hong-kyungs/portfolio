@@ -113,8 +113,14 @@ body{
     .content{
         width: 100%; padding: 0 0 150px;
         .sub_visual{
-            width: 100%; height: 200px;
-            background: #bbb; margin-bottom: 100px;
+            width: 100%; height: 300px;
+            margin-bottom: 100px;
+            h1{
+                font: 50px/1 'Playfair Display'; color: #fff;
+                text-align: center;
+                position: relative; 
+                top: 50%; transform: translateY(-50%);
+            }
         }
         .inner{
             width: 1180px; margin: 0 auto; min-height: 500px;
