@@ -397,6 +397,14 @@ body #footer_sub .inner::after {
   grid-auto-rows: 200px;
   grid-template-areas: "a b c d" "a e f f" "g g f f";
 }
+.gallery .inner .wrap .g_img {
+  opacity: 1;
+  transition: 0.5s;
+}
+.gallery .inner .wrap .g_img:hover {
+  opacity: 0.7;
+  cursor: zoom-in;
+}
 .gallery .inner .wrap .g_img1 {
   grid-area: a;
   background: lightblue;
@@ -453,6 +461,34 @@ body #footer_sub .inner::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.gallery aside {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.gallery aside .aside_inner {
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.gallery aside .aside_inner img {
+  height: 90%;
+}
+.gallery aside .aside_inner span {
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
 }
 
 table {
@@ -750,6 +786,7 @@ fieldset {
   color: #000;
   transition: 0.5s;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.05);
 }
 .community .inner .accordion .active .c_content {
   height: auto;
@@ -757,6 +794,68 @@ fieldset {
 }
 .community .inner .accordion .active .label::before {
   transform: rotate(-135deg);
+}
+
+.youtube .sub_visual {
+  background: url(../img/sub_img7.jpg) no-repeat center/cover;
+}
+.youtube .vidList {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.youtube .vidList article {
+  width: 100%;
+  height: 40vh;
+  border-bottom: 1px solid #333;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.youtube .vidList article:nth-of-type(1) {
+  border-top: 1px solid #333;
+}
+.youtube .vidList article h2 {
+  font: 30px/1 "Playfair Display";
+}
+.youtube .vidList article > a {
+  width: 50%;
+}
+.youtube .vidList article > a img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.youtube .vidList article .vid_con {
+  width: 30%;
+  padding-right: 20px;
+  position: relative;
+}
+.youtube .vidList article .vid_con h3 {
+  font: bold 22px/1.4 "open sans";
+  color: #333;
+  margin-bottom: 20px;
+}
+.youtube .vidList article .vid_con p {
+  font: 12px/1.2 "open sans";
+  color: #333;
+}
+.youtube .vidList article .vid_con .play_btn {
+  display: block;
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  font: 14px/30px "open sans";
+  color: #333;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 10px;
 }
 
 * {

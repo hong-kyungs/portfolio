@@ -51,8 +51,9 @@
                     font: 15px/1.5 'open sans'; color: #000;
                     transition: 0.5s;
                     overflow: hidden;
+                    background: rgba(0,0,0,0.05);
                 }
-            }
+            }  
             .active{
                 .c_content{
                         height: auto;
