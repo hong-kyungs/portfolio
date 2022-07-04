@@ -847,7 +847,7 @@ fieldset {
 }
 .youtube .vidList article .vid_con .play_btn {
   display: block;
-  width: 50px;
+  width: 100px;
   height: 30px;
   position: absolute;
   bottom: 0;
@@ -855,7 +855,30 @@ fieldset {
   color: #333;
   text-align: center;
   border: 1px solid #333;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+.youtube figure.pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw;
+}
+.youtube figure.pop .btnClose {
+  position: absolute;
+  right: 5vw;
+  top: 2.5vw;
+  cursor: pointer;
+}
+.youtube figure.pop .btnClose i {
+  font-size: 26px;
+  color: #fff;
 }
 
 * {

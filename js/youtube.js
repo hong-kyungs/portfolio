@@ -11,6 +11,7 @@ const key = "AIzaSyCVnqQLlCzUMqd8pqBHc34g-onr96Z0TaM";
 const playlistId ="PL0Rto-Av72qHWnhIdz3cs9CAEL0Z1R2Ln";
 const num = 6;
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
+const play_btns = vidList.querySelectorAll(".play_btn");
 
 fetch(url)
 .then((data)=>{
@@ -51,4 +52,26 @@ fetch(url)
     })
 
     vidList.innerHTML = result;
+})
+
+vidList.addEventListener("click", (e)=>{
+    e.preventDefault(); 
+
+    const vidId = e.target.closest("a").getAttribute("href");
+
+    let pop = document.createElement("figure");
+    pop.classList.add("pop");
+    pop.innerHTML = `
+    <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
+    <span class="btnClose"><i class="fa-solid fa-x"></i></span>
+    `
+    vidList.append(pop);
+})
+
+vidList.addEventListener("click", (e)=>{
+    const pop = vidList.querySelector(".pop");
+    if(pop){
+        const close = pop.querySelector("span i");
+        if(e.target == close) pop.remove();
+    }
 })
