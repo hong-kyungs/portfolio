@@ -6,39 +6,38 @@ key : AIzaSyCVnqQLlCzUMqd8pqBHc34g-onr96Z0TaM
 playlist : PL0Rto-Av72qHWnhIdz3cs9CAEL0Z1R2Ln
 youtube에서 list뒤에 키 복사.
 */
-const vidList = document.querySelector(".vidList");
-const key = "AIzaSyCVnqQLlCzUMqd8pqBHc34g-onr96Z0TaM";
-const playlistId ="PL0Rto-Av72qHWnhIdz3cs9CAEL0Z1R2Ln";
+const vidList = document.querySelector('.vidList');
+const key = 'AIzaSyCVnqQLlCzUMqd8pqBHc34g-onr96Z0TaM';
+const playlistId = 'PL0Rto-Av72qHWnhIdz3cs9CAEL0Z1R2Ln';
 const num = 6;
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
-const play_btns = vidList.querySelectorAll(".play_btn");
+const play_btns = vidList.querySelectorAll('.play_btn');
 
 fetch(url)
-.then((data)=>{
-    return data.json();
-})
-.then((json)=>{
-    let items = json.items;
-    console.log(items);
+	.then((data) => {
+		return data.json();
+	})
+	.then((json) => {
+		let items = json.items;
+		console.log(items);
 
-    let result = '';
+		let result = '';
 
-    items.map((item,index)=>{
-        let title = item.snippet.title;
+		items.map((item, index) => {
+			let title = item.snippet.title;
 
-        if(title.length > 30){
-            title = title.substr(0, 30) + "...";
-        }
+			if (title.length > 30) {
+				title = title.substr(0, 30) + '...';
+			}
 
-        let vid_con = item.snippet.description;
-        if(vid_con.length > 100){
-            vid_con = vid_con.substr(0, 100) + "...";
-        }
+			let vid_con = item.snippet.description;
+			if (vid_con.length > 100) {
+				vid_con = vid_con.substr(0, 100) + '...';
+			}
 
-
-        result += `
+			result += `
                 <article>
-                    <h2>${0 + [index + 1] + "."}</h2>
+                    <h2>${0 + [index + 1] + '.'}</h2>
                     <a href="${item.snippet.resourceId.videoId}" class="pic">
                         <img src="${item.snippet.thumbnails.medium.url}">
                     </a>
@@ -48,30 +47,32 @@ fetch(url)
                         <a href="#" class="play_btn">play</a>
                     </div>
                 </article>
-        `
-    })
+        `;
+		});
 
-    vidList.innerHTML = result;
-})
+		vidList.innerHTML = result;
+	});
 
-vidList.addEventListener("click", (e)=>{
-    e.preventDefault(); 
+vidList.addEventListener('click', (e) => {
+	e.preventDefault();
 
-    const vidId = e.target.closest("a").getAttribute("href");
+	const vidId = e.target.closest('a').getAttribute('href');
 
-    let pop = document.createElement("figure");
-    pop.classList.add("pop");
-    pop.innerHTML = `
+	let pop = document.createElement('figure');
+	pop.classList.add('pop');
+	pop.innerHTML = `
     <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
     <span class="btnClose"><i class="fa-solid fa-x"></i></span>
-    `
-    vidList.append(pop);
-})
+    `;
+	vidList.append(pop);
+	document.body.style.overflow = 'hidden';
+});
 
-vidList.addEventListener("click", (e)=>{
-    const pop = vidList.querySelector(".pop");
-    if(pop){
-        const close = pop.querySelector("span i");
-        if(e.target == close) pop.remove();
-    }
-})
+vidList.addEventListener('click', (e) => {
+	const pop = vidList.querySelector('.pop');
+	if (pop) {
+		const close = pop.querySelector('span i');
+		if (e.target == close) pop.remove();
+		if (e.target == close) document.body.style.overflow = 'visible';
+	}
+});

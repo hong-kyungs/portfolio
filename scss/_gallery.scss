@@ -1,104 +1,116 @@
-.gallery{
-    .sub_visual{
-        background: url(../img/sub_img3.jpg) no-repeat center/cover;
-    }
-    
-    .inner{
-        width: 1180px; min-height: 80vh;
-        .wrap{
-            width: 100%; position: relative;
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-auto-rows: 200px;
-            grid-template-areas: 
-            "a b c d"
-            "a e f f"
-            "g g f f";
-            .g_img{
-                opacity: 1;
-                transition: 0.5s;
-                &:hover{
-                    opacity: 0.7;
-                    cursor: zoom-in;
-                }
-            }
-            .g_img1{
-                grid-area: a;
-                background: lightblue;
-                img{
-                    width: 100%; height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .g_img2{
-                grid-area: b;
-                img{
-                    width: 100%; height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .g_img3{
-                grid-area: c;
-                img{
-                    width: 100%; height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .g_img4{
-                grid-area: d;
-                img{
-                    width: 100%; height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .g_img5{
-                grid-area: e;
-                img{
-                    width: 100%; height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .g_img6{
-                grid-area: f;
-                img{
-                    width: 100%; height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .g_img7{
-                grid-area: g;
-                img{
-                    width: 100%; height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
+.gallery {
+  .sub_visual {
+    background: url(../img/sub_img3.jpg) no-repeat center/cover;
+  }
 
-    }
-    
-    aside{
-        width: 100%; height: 100vh;
-        background: rgba(0,0,0,0.6);
-        position: fixed; top: 0; left: 0;
-        padding: 5vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-        .aside_inner{
-            height: 100%;
-            position: relative;
-            cursor: pointer;
-            img{
-                height: 90%;
-            }
-            span{
-                font-size: 30px; color: #fff;
-                position: absolute;
-                right: 0; bottom: 20px;
-            }
+  .inner {
+    width: 1180px;
+    min-height: 80vh;
+    .wrap {
+      width: 100%;
+      position: relative;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-auto-rows: 200px;
+      grid-template-areas:
+        'a b c d'
+        'a e f f'
+        'g g f f';
+      .g_img {
+        opacity: 1;
+        transition: 0.5s;
+        &:hover {
+          opacity: 0.7;
+          cursor: zoom-in;
         }
+      }
+      .g_img1 {
+        grid-area: a;
+        background: lightblue;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .g_img2 {
+        grid-area: b;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .g_img3 {
+        grid-area: c;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .g_img4 {
+        grid-area: d;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .g_img5 {
+        grid-area: e;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .g_img6 {
+        grid-area: f;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .g_img7 {
+        grid-area: g;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
-    
+  }
+
+  aside {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    .aside_inner {
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      img {
+        height: 90%;
+      }
+      span {
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+      }
+    }
+  }
 }
