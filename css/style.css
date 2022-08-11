@@ -781,15 +781,62 @@ fieldset {
   margin-right: 20px;
 }
 .location .map_content .branch li.on i {
-  color: #AD9F87;
+  color: #ad9f87;
 }
 .location .map_content #map {
   width: 70%;
   height: 400px;
 }
 
+.product {
+  background: #efefef;
+}
 .product .sub_visual {
   background: url(../img/sub_img2.jpg) no-repeat top/cover;
+}
+.product .inner ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.product .inner ul li {
+  width: 150px;
+  height: 30px;
+  margin-left: 10px;
+}
+.product .inner ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font: 14px/30px "Open Sans";
+  color: #aaa;
+}
+.product .inner ul li.on a {
+  background: linear-gradient(45deg, rgb(186, 83, 112), #f4e2d8);
+  color: #fff;
+  box-shadow: 0px 0px 20px rgba(255, 205, 210, 0.9);
+}
+.product .inner .product-list {
+  width: 100%;
+  float: left;
+}
+.product .inner .product-list article {
+  width: 25%;
+  padding: 10px;
+}
+.product .inner .product-list article > div {
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.product .inner .product-list article > div img {
+  width: 100%;
 }
 
 .community .sub_visual {

@@ -1,59 +1,69 @@
-.location{
-    width: 100%;
-    .sub_visual{
-        background: url(../img/sub_img5.jpg) no-repeat center/cover;
+.location {
+  width: 100%;
+  .sub_visual {
+    background: url(../img/sub_img5.jpg) no-repeat center/cover;
+  }
+  .map_info {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    .info_list {
+      width: 25%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      i {
+        font-size: 30px;
+        color: #476257;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font: bold 20px/1 'open sans';
+        color: #333;
+        margin-bottom: 10px;
+      }
+      p {
+        font: 15px/1.5 'open sans';
+        color: #333;
+        text-align: center;
+      }
     }
-    .map_info{
-        width: 80%; margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 50px;
-        .info_list{
-            width: 25%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            i{
-                font-size: 30px; color: #476257;
-                margin-bottom: 10px;
-            }
-            h2{
-                font: bold 20px/1 'open sans'; color: #333;
-                margin-bottom: 10px;
-            }
-            p{
-                font: 15px/1.5 'open sans'; color: #333;
-                text-align: center;
-            }
-        }
-    }
+  }
 
-    .map_content{
-        width: 80%; margin: 0 auto;
-        display: flex;
-        .branch{
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            li{
-                width: 100%;
-                cursor: pointer;
-                a{
-                    display: block;
-                    font: bold 20px/1 'open sans'; color: #333;
-                    margin-bottom: 20px;
-                    i{
-                        font-size: 18px; color: #476257;
-                        margin-right: 20px;
-                    }
-                }
-                &.on i{ color:#AD9F87;}
-            }
+  .map_content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    .branch {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      li {
+        width: 100%;
+        cursor: pointer;
+        a {
+          display: block;
+          font: bold 20px/1 'open sans';
+          color: #333;
+          margin-bottom: 20px;
+          i {
+            font-size: 18px;
+            color: #476257;
+            margin-right: 20px;
+          }
         }
-        #map{
-            width: 70%; height: 400px;
+        &.on i {
+          color: #ad9f87;
         }
+      }
     }
+    #map {
+      width: 70%;
+      height: 400px;
+    }
+  }
 }
