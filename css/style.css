@@ -53,7 +53,7 @@ body #header_sub .inner .menuWeb .util li {
 }
 body #header_sub .inner .menuWeb .util li a i {
   font-size: 20px;
-  color: #A18870;
+  color: #a18870;
 }
 body #header_sub .inner .btnCall {
   width: 20px;
@@ -183,6 +183,7 @@ body .content .inner h1 {
 body #footer_sub {
   width: 100%;
   background: #476257;
+  position: relative;
 }
 body #footer_sub .inner {
   width: 1180px;
@@ -287,17 +288,22 @@ body #footer_sub .inner::after {
     min-height: 400px;
   }
   body #footer_sub .inner {
+    width: 100%;
     padding: 2vw 2vh;
   }
   body #footer_sub .inner .footer-logo {
-    width: 51%;
+    width: 50%;
+    margin-right: 2%;
   }
   body #footer_sub .inner .footer_contact {
     width: 25%;
+    margin-right: 2%;
   }
   body #footer_sub .inner .footer_sns {
     width: 20%;
-    padding-left: 2vw;
+  }
+  body #footer_sub .inner::after {
+    width: 100%;
   }
 }
 @media screen and (max-width: 539px) and (max-width: 1179px) {
@@ -794,6 +800,11 @@ fieldset {
 .product .sub_visual {
   background: url(../img/sub_img2.jpg) no-repeat top/cover;
 }
+.product .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .product .inner ul {
   display: flex;
   justify-content: center;
@@ -838,7 +849,35 @@ fieldset {
 .product .inner .product-list article > div img {
   width: 100%;
 }
+.product .inner .product-list article > div h2 {
+  font: bold 15px/1 "open sans";
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.product .inner .product-list article > div p {
+  font: 12px/1 "open sans";
+  color: #777;
+  margin-bottom: 10px;
+}
 
+@media screen and (max-width: 1179px) {
+  .product .inner {
+    padding: 30px;
+    overflow: hidden;
+  }
+  .product .inner .product-list article {
+    width: 33.3333%;
+  }
+}
+@media screen and (max-width: 539px) {
+  .product .inner {
+    padding: 0;
+  }
+  .product .inner .product-list article {
+    width: 50%;
+  }
+}
 .community .sub_visual {
   background: url(../img/sub_img4.jpg) no-repeat center/cover;
 }

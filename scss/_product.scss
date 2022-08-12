@@ -4,6 +4,11 @@
     background: url(../img/sub_img2.jpg) no-repeat top/cover;
   }
   .inner {
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
     ul {
       display: flex;
       justify-content: center;
@@ -46,6 +51,44 @@
           img {
             width: 100%;
           }
+          h2 {
+            font: bold 15px/1 'open sans';
+            color: #444;
+            margin-top: 10px;
+            margin-bottom: 8px;
+          }
+          p {
+            font: 12px/1 'open sans';
+            color: #777;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1179px) {
+  .product {
+    .inner {
+      padding: 30px;
+      overflow: hidden;
+      .product-list {
+        article {
+          width: 33.3333%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .product {
+    .inner {
+      padding: 0;
+      .product-list {
+        article {
+          width: 50%;
         }
       }
     }
