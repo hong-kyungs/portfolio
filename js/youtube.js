@@ -72,7 +72,9 @@ vidList.addEventListener('click', (e) => {
 	const pop = vidList.querySelector('.pop');
 	if (pop) {
 		const close = pop.querySelector('span i');
-		if (e.target == close) pop.remove();
-		if (e.target == close) document.body.style.overflow = 'visible';
+		if (e.target == close) {
+			pop.remove();
+			document.body.style.overflow = 'visible';
+		}
 	}
 });

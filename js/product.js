@@ -25,3 +25,34 @@ window.addEventListener('load', () => {
 		});
 	}
 });
+
+const product = document.querySelector('.product');
+const list = product.querySelector('.product-list');
+
+list.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	let target = e.target.closest('img');
+	if (e.target == target) {
+		let imgSrc = e.target.closest('img').getAttribute('src');
+		let pop = document.createElement('aside');
+		let pop_in = `
+						<div class="aside_inner">
+								<img src="${imgSrc}">
+								<span class="close"><i class="fa-solid fa-xmark"></i></span>
+						</div>
+		`;
+		pop.innerHTML = pop_in;
+		product.append(pop);
+		document.body.style.overflow = 'hidden';
+	}
+});
+
+product.addEventListener('click', (e) => {
+	const target = product.querySelector('aside');
+	const close = target.querySelector('.aside_inner .close i');
+	if (e.target == close) {
+		target.remove();
+		document.body.style.overflow = 'visible';
+	}
+});
