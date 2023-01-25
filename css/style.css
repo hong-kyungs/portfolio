@@ -1175,21 +1175,29 @@ body #header .inner .txt {
   height: 75vh;
   margin: 0 auto;
   position: relative;
-  padding: 100px 200px;
 }
-body #header .inner .txt h2 {
+body #header .inner .txt .txt-inner {
+  width: 55vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15vh;
+}
+body #header .inner .txt .txt-inner h2 {
   font: 40px/1 "Source Serif Pro";
   color: #fff;
-  margin-top: 150px;
   text-align: center;
 }
-body #header .inner .txt p {
+body #header .inner .txt .txt-inner p {
   font: 20px/1.4 "Source Serif Pro";
   color: #fff;
-  margin-top: 30px;
   text-align: center;
 }
-body #header .inner .txt a {
+body #header .inner .txt .txt-inner a {
   display: block;
   width: 300px;
   height: 40px;
@@ -1198,12 +1206,11 @@ body #header .inner .txt a {
   color: #fff;
   letter-spacing: 3px;
   text-align: center;
-  margin-top: 30px;
   margin-left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
 }
-body #header .inner .txt a:hover {
+body #header .inner .txt .txt-inner a:hover {
   background-color: #b2c5c1;
 }
 body #header .inner .btnCall {
@@ -1731,39 +1738,38 @@ body #footer .inner span {
 
 @media screen and (max-width: 1179px) {
   body #header::after {
-    height: 7vh;
+    height: 8vh;
     opacity: 1;
     z-index: 0;
   }
   body #header .inner {
     width: 100%;
-    height: 50%;
   }
   body #header .inner .header_nav {
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     z-index: 1;
   }
   body #header .inner .header_nav h1 {
     position: absolute;
-    top: 2vh;
-    left: 30px;
+    top: 0;
+    left: 3vw;
     transform: translate(0, 0);
   }
   body #header .inner .header_nav h1 a {
-    font: bold 25px/1 "Open Sans";
+    font: bold 28px/8vh "Open Sans";
   }
   body #header .inner .header_nav .menuWeb {
     display: none;
   }
   body #header .inner .txt {
     width: 100%;
-    height: 90vh;
-    transform: translateY(20%);
+    height: 92vh;
   }
   body #header .inner .btnCall {
     display: block;
-    top: 3vh;
+    top: 2.5vh;
+    right: 3vw;
   }
   body #introduction {
     padding: 0 20px;
@@ -1844,33 +1850,37 @@ body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
 }
 @media screen and (max-width: 539px) {
   body #header {
-    height: 60%;
+    height: 60vh;
   }
   body #header::after {
-    height: 10vh;
+    height: 8vh;
   }
-  body #header .inner .header_nav h1 {
-    top: 4vh;
+  body #header .inner .header_nav {
+    height: 8vh;
+  }
+  body #header .inner .header_nav h1 a {
+    font: bold 24px/8vh "Open Sans";
+    letter-spacing: 2px;
   }
   body #header .inner .txt {
-    width: 100%;
-    height: 60vh;
-    padding: 20px 30px;
+    height: 52vh;
   }
-  body #header .inner .txt h2 {
+  body #header .inner .txt .txt-inner {
+    width: 70vw;
+    height: 20vh;
+    bottom: 5vh;
+  }
+  body #header .inner .txt .txt-inner h2 {
     font: 24px/1 "Source Serif Pro";
   }
-  body #header .inner .txt p {
+  body #header .inner .txt .txt-inner p {
     font: 12px/1.4 "Source Serif Pro";
   }
-  body #header .inner .txt a {
-    width: 100%;
+  body #header .inner .txt .txt-inner a {
+    width: 70%;
     height: 30px;
     border: 1px solid #b2c5c1;
     font: bold 12px/30px "open sans";
-  }
-  body #header .inner .btnCall {
-    top: 5vh;
   }
   body #introduction .inner {
     flex-wrap: wrap;
@@ -1894,6 +1904,9 @@ body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
     font: 12px/30px "open sans";
     color: #fff;
   }
+  body #introduction .inner .introduction_img img {
+    height: 200px;
+  }
   body #video .vid_inner .txt h1 {
     font: bold 24px/1 "open sans";
   }
@@ -1905,7 +1918,7 @@ body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
     font: bold 12px/1 "open sans";
   }
   body #video .vid_inner figure {
-    height: 40vh;
+    height: 25vh;
   }
   body #video .vid_inner a {
     font: bold 14px/1 "open sans";
@@ -1939,6 +1952,7 @@ body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
     font: bold 12px/1 "open sans";
   }
   body #community {
+    width: 100%;
     padding: 0;
   }
   body #community .com_inner {
@@ -1958,7 +1972,10 @@ body #community .com_inner .swiper article .comment,
 body #community .com_inner .swiper article .swiper-slide,
 body #community .com_inner .swiper .swiper-wrapper .comment,
 body #community .com_inner .swiper .swiper-wrapper .swiper-slide {
+    position: absolute;
+    height: 60%;
     padding: 0 10vw;
+    top: 10vh;
   }
   body #community .com_inner .wrap article .comment h1,
 body #community .com_inner .wrap article .swiper-slide h1,
@@ -1968,8 +1985,8 @@ body #community .com_inner .swiper article .comment h1,
 body #community .com_inner .swiper article .swiper-slide h1,
 body #community .com_inner .swiper .swiper-wrapper .comment h1,
 body #community .com_inner .swiper .swiper-wrapper .swiper-slide h1 {
-    font: bold 20px/1 "Open Sans";
-    margin: 12vh 0 5vh;
+    font: bold 24px/1 "Open Sans";
+    color: #a18870;
   }
   body #community .com_inner .wrap article .comment .cus_img,
 body #community .com_inner .wrap article .swiper-slide .cus_img,
@@ -1979,8 +1996,21 @@ body #community .com_inner .swiper article .comment .cus_img,
 body #community .com_inner .swiper article .swiper-slide .cus_img,
 body #community .com_inner .swiper .swiper-wrapper .comment .cus_img,
 body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
+  }
+  body #community .com_inner .wrap article .comment .cus_img img,
+body #community .com_inner .wrap article .swiper-slide .cus_img img,
+body #community .com_inner .wrap .swiper-wrapper .comment .cus_img img,
+body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img img,
+body #community .com_inner .swiper article .comment .cus_img img,
+body #community .com_inner .swiper article .swiper-slide .cus_img img,
+body #community .com_inner .swiper .swiper-wrapper .comment .cus_img img,
+body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
   body #community .com_inner .wrap article .comment h2,
 body #community .com_inner .wrap article .swiper-slide h2,
@@ -1990,7 +2020,8 @@ body #community .com_inner .swiper article .comment h2,
 body #community .com_inner .swiper article .swiper-slide h2,
 body #community .com_inner .swiper .swiper-wrapper .comment h2,
 body #community .com_inner .swiper .swiper-wrapper .swiper-slide h2 {
-    font: 12px/1 "Source Serif Pro";
+    font: 16px/1 "Source Serif Pro";
+    text-align: center;
   }
   body #community .com_inner .wrap article .comment h3,
 body #community .com_inner .wrap article .swiper-slide h3,
