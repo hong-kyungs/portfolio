@@ -1276,9 +1276,9 @@ body #header .inner .menuMo.on {
 }
 body #header .inner .menuMo h1 {
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   border-bottom: 1px solid #aaa;
-  padding: 20px 0;
+  padding: 20px 0 5px;
 }
 body #header .inner .menuMo h1 a {
   display: block;
@@ -1781,6 +1781,62 @@ body #footer .inner span {
   }
   body #product .inner {
     width: 100%;
+  }
+  body #community .com_inner .wrap article .comment h1,
+body #community .com_inner .wrap article .swiper-slide h1,
+body #community .com_inner .wrap .swiper-wrapper .comment h1,
+body #community .com_inner .wrap .swiper-wrapper .swiper-slide h1,
+body #community .com_inner .swiper article .comment h1,
+body #community .com_inner .swiper article .swiper-slide h1,
+body #community .com_inner .swiper .swiper-wrapper .comment h1,
+body #community .com_inner .swiper .swiper-wrapper .swiper-slide h1 {
+    font: bold 24px/1 "Open Sans";
+    color: #a18870;
+  }
+  body #community .com_inner .wrap article .comment .cus_img,
+body #community .com_inner .wrap article .swiper-slide .cus_img,
+body #community .com_inner .wrap .swiper-wrapper .comment .cus_img,
+body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img,
+body #community .com_inner .swiper article .comment .cus_img,
+body #community .com_inner .swiper article .swiper-slide .cus_img,
+body #community .com_inner .swiper .swiper-wrapper .comment .cus_img,
+body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img {
+    width: 80px;
+    height: 80px;
+  }
+  body #community .com_inner .wrap article .comment .cus_img img,
+body #community .com_inner .wrap article .swiper-slide .cus_img img,
+body #community .com_inner .wrap .swiper-wrapper .comment .cus_img img,
+body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img img,
+body #community .com_inner .swiper article .comment .cus_img img,
+body #community .com_inner .swiper article .swiper-slide .cus_img img,
+body #community .com_inner .swiper .swiper-wrapper .comment .cus_img img,
+body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  body #community .com_inner .wrap article .comment h2,
+body #community .com_inner .wrap article .swiper-slide h2,
+body #community .com_inner .wrap .swiper-wrapper .comment h2,
+body #community .com_inner .wrap .swiper-wrapper .swiper-slide h2,
+body #community .com_inner .swiper article .comment h2,
+body #community .com_inner .swiper article .swiper-slide h2,
+body #community .com_inner .swiper .swiper-wrapper .comment h2,
+body #community .com_inner .swiper .swiper-wrapper .swiper-slide h2 {
+    font: 16px/1 "Source Serif Pro";
+    text-align: center;
+  }
+  body #community .com_inner .wrap article .comment h3,
+body #community .com_inner .wrap article .swiper-slide h3,
+body #community .com_inner .wrap .swiper-wrapper .comment h3,
+body #community .com_inner .wrap .swiper-wrapper .swiper-slide h3,
+body #community .com_inner .swiper article .comment h3,
+body #community .com_inner .swiper article .swiper-slide h3,
+body #community .com_inner .swiper .swiper-wrapper .comment h3,
+body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
+    font: 12px/1 "Open Sans";
   }
   body #footer .inner {
     width: 100%;
