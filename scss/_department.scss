@@ -88,23 +88,26 @@
                   position: relative;
                   padding: 30px;
                   transform: rotateY(180deg);
-                  &::after {
-                    content: '';
-                    display: block;
-                    width: 100px;
-                    height: 2px;
-                    background: #222;
-                    position: absolute;
-                    bottom: 35%;
-                    left: 50%;
-                    margin-left: -50px;
-                  }
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  // &::after {
+                  //   content: '';
+                  //   display: block;
+                  //   width: 100px;
+                  //   height: 2px;
+                  //   background: #222;
+                  //   position: absolute;
+                  //   bottom: 35%;
+                  //   left: 50%;
+                  //   margin-left: -50px;
+                  // }
                   h3 {
                     font: bold 20px/1 'open sans';
                     color: #000;
-                    margin-top: 50px;
+                    // margin-top: 50px;
                     text-align: center;
-                    margin-bottom: 30px;
+                    // margin-bottom: 30px;
                     text-transform: uppercase;
                   }
                   p {
@@ -113,13 +116,26 @@
                     text-align: center;
                   }
                   a {
-                    position: absolute;
-                    bottom: 20%;
-                    left: 50%;
-                    margin-left: -10px;
+                    // position: absolute;
+                    // bottom: 20%;
+                    // left: 50%;
+                    // margin-left: -10px;
+                    text-align: center;
+                    padding: 5% 0;
                     i {
                       font-size: 20px;
                       color: #222;
+                    }
+                    &::before {
+                      content: '';
+                      display: block;
+                      width: 100px;
+                      height: 2px;
+                      background: #222;
+                      position: absolute;
+                      margin-top: -7%;
+                      left: 50%;
+                      margin-left: -50px;
                     }
                   }
                 }
@@ -135,6 +151,95 @@
             &:hover img {
               transform: scale(1.2);
               filter: grayscale(0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//tablet 구간
+@media screen and (max-width: 1179px) {
+  .department {
+    .inner {
+      width: 100%;
+      #members {
+        width: 100%;
+        .m_inner {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+//mobile 구간
+@media screen and (max-width: 539px) {
+  .department {
+    .inner {
+      #members {
+        width: 100%;
+        .m_inner {
+          h1 {
+            font: 26px/1 'Source Serif Pro';
+          }
+          h2 {
+            font: 14px/1 'Source Serif Pro';
+          }
+          .wrap {
+            article {
+              width: 100%;
+              height: 45vh;
+              display: block;
+              div {
+                width: 100%;
+                height: 50%;
+              }
+              .img {
+                width: 100%;
+                img {
+                  object-fit: fill;
+                }
+              }
+              .card_container {
+                width: 100%;
+                height: 50%;
+                .card {
+                  .front {
+                    font-size: 20px;
+                    background: #b2dfdb;
+                  }
+
+                  .back {
+                    padding: 15px;
+                    transform: rotateY(180deg);
+                    h3 {
+                      font: bold 14px/1 'open sans';
+                    }
+                    p {
+                      font: 12px/1.4 'open sans';
+                    }
+                    a {
+                      padding: 2% 0;
+                      i {
+                        font-size: 12px;
+                      }
+                      &::before {
+                        content: '';
+                        margin-top: -4%;
+                      }
+                    }
+                  }
+                }
+              }
+              &:hover .card {
+                transform: rotateY(180deg);
+              }
+              &:hover img {
+                transform: none;
+                filter: none;
+              }
             }
           }
         }

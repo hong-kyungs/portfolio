@@ -679,24 +679,14 @@ fieldset {
   position: relative;
   padding: 30px;
   transform: rotateY(180deg);
-}
-.department .inner #members .m_inner .wrap article .card_container .card .back::after {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 2px;
-  background: #222;
-  position: absolute;
-  bottom: 35%;
-  left: 50%;
-  margin-left: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .department .inner #members .m_inner .wrap article .card_container .card .back h3 {
   font: bold 20px/1 "open sans";
   color: #000;
-  margin-top: 50px;
   text-align: center;
-  margin-bottom: 30px;
   text-transform: uppercase;
 }
 .department .inner #members .m_inner .wrap article .card_container .card .back p {
@@ -705,14 +695,23 @@ fieldset {
   text-align: center;
 }
 .department .inner #members .m_inner .wrap article .card_container .card .back a {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  margin-left: -10px;
+  text-align: center;
+  padding: 5% 0;
 }
 .department .inner #members .m_inner .wrap article .card_container .card .back a i {
   font-size: 20px;
   color: #222;
+}
+.department .inner #members .m_inner .wrap article .card_container .card .back a::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: #222;
+  position: absolute;
+  margin-top: -7%;
+  left: 50%;
+  margin-left: -50px;
 }
 .department .inner #members .m_inner .wrap article:hover .card {
   transform: rotateY(180deg);
@@ -725,6 +724,78 @@ fieldset {
   filter: grayscale(0.2);
 }
 
+@media screen and (max-width: 1179px) {
+  .department .inner {
+    width: 100%;
+  }
+  .department .inner #members {
+    width: 100%;
+  }
+  .department .inner #members .m_inner {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .department .inner #members {
+    width: 100%;
+  }
+  .department .inner #members .m_inner h1 {
+    font: 26px/1 "Source Serif Pro";
+  }
+  .department .inner #members .m_inner h2 {
+    font: 14px/1 "Source Serif Pro";
+  }
+  .department .inner #members .m_inner .wrap article {
+    width: 100%;
+    height: 45vh;
+    display: block;
+  }
+  .department .inner #members .m_inner .wrap article div {
+    width: 100%;
+    height: 50%;
+  }
+  .department .inner #members .m_inner .wrap article .img {
+    width: 100%;
+  }
+  .department .inner #members .m_inner .wrap article .img img {
+    object-fit: fill;
+  }
+  .department .inner #members .m_inner .wrap article .card_container {
+    width: 100%;
+    height: 50%;
+  }
+  .department .inner #members .m_inner .wrap article .card_container .card .front {
+    font-size: 20px;
+    background: #b2dfdb;
+  }
+  .department .inner #members .m_inner .wrap article .card_container .card .back {
+    padding: 15px;
+    transform: rotateY(180deg);
+  }
+  .department .inner #members .m_inner .wrap article .card_container .card .back h3 {
+    font: bold 14px/1 "open sans";
+  }
+  .department .inner #members .m_inner .wrap article .card_container .card .back p {
+    font: 12px/1.4 "open sans";
+  }
+  .department .inner #members .m_inner .wrap article .card_container .card .back a {
+    padding: 2% 0;
+  }
+  .department .inner #members .m_inner .wrap article .card_container .card .back a i {
+    font-size: 12px;
+  }
+  .department .inner #members .m_inner .wrap article .card_container .card .back a::before {
+    content: "";
+    margin-top: -4%;
+  }
+  .department .inner #members .m_inner .wrap article:hover .card {
+    transform: rotateY(180deg);
+  }
+  .department .inner #members .m_inner .wrap article:hover img {
+    transform: none;
+    filter: none;
+  }
+}
 .location {
   width: 100%;
 }
