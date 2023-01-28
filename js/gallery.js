@@ -8,7 +8,9 @@ for (let i = 0; i < imgs.length; i++) {
 		const aside = document.querySelectorAll('aside');
 		let pop_in = `
             <div class="aside_inner">
-                <img src="${g_img}">
+								<div class="img_inner">
+                	<img src="${g_img}">
+								</div>
                 <span class="close"><i class="fa-solid fa-xmark"></i><span>
             </div>
     `;
