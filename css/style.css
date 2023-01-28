@@ -1025,12 +1025,18 @@ fieldset {
   position: relative;
 }
 .community .inner .accordion .container .label span {
-  text-indent: 40px;
-  font: bold 20px/60px "Playfair Display";
-  margin-right: 15px;
+  width: 5%;
+  font: bold 20px/1 "Playfair Display";
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .community .inner .accordion .container .label p {
-  font: bold 16px/70px "open sans";
+  width: 90%;
+  font: bold 16px/1 "open sans";
+  display: flex;
+  align-items: center;
 }
 .community .inner .accordion .container .label::before {
   content: "";
@@ -1064,6 +1070,24 @@ fieldset {
   transform: rotate(-135deg);
 }
 
+@media screen and (max-width: 1179px) {
+  .community .inner {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .community .inner .accordion .container .label span {
+    width: 10%;
+    font: bold 16px/1 "Playfair Display";
+  }
+  .community .inner .accordion .container .label p {
+    width: 80%;
+    font: bold 14px/1 "open sans";
+  }
+  .community .inner .accordion .container .c_content {
+    font: 12px/1.2 "open sans";
+  }
+}
 .youtube .sub_visual {
   background: url(../img/sub_img7.jpg) no-repeat center/cover;
 }
