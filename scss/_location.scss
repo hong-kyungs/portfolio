@@ -124,9 +124,12 @@
               font: bold 14px/1 'open sans';
               text-align: center;
               margin-bottom: 20px;
+              display: flex;
+              flex-direction: column;
               i {
                 font-size: 14px;
-                margin-right: 1vw;
+                margin-right: 0;
+                margin-bottom: 5px;
               }
             }
             p {

@@ -562,14 +562,16 @@ fieldset {
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
 }
-.membership .inner .join .join_inner table tr th, .membership .inner .join .join_inner table tr td {
+.membership .inner .join .join_inner table tr th,
+.membership .inner .join .join_inner table tr td {
   border-bottom: 1px solid #ddd;
   padding: 15px 25px;
 }
 .membership .inner .join .join_inner table tr th {
   width: 30%;
 }
-.membership .inner .join .join_inner table tr th input[type=reset], .membership .inner .join .join_inner table tr th input[type=submit] {
+.membership .inner .join .join_inner table tr th input[type=reset],
+.membership .inner .join .join_inner table tr th input[type=submit] {
   width: 20%;
   height: 40px;
   border: 1px solid #333;
@@ -581,21 +583,25 @@ fieldset {
   cursor: pointer;
   transition: 1s;
 }
-.membership .inner .join .join_inner table tr th input[type=reset]:hover, .membership .inner .join .join_inner table tr th input[type=submit]:hover {
+.membership .inner .join .join_inner table tr th input[type=reset]:hover,
+.membership .inner .join .join_inner table tr th input[type=submit]:hover {
   background: #333;
   color: #fff;
 }
 .membership .inner .join .join_inner table tr td {
   border-left: 1px solid #aaa;
-  font-family: "open sans";
+  font: 12px "open sans";
 }
-.membership .inner .join .join_inner table tr td input[type=text], .membership .inner .join .join_inner table tr td input[type=password], .membership .inner .join .join_inner table tr td select {
+.membership .inner .join .join_inner table tr td input[type=text],
+.membership .inner .join .join_inner table tr td input[type=password],
+.membership .inner .join .join_inner table tr td select {
   width: 50%;
   background: rgba(0, 0, 0, 0.03);
   padding: 10px;
   border: 1px solid #aaa;
 }
-.membership .inner .join .join_inner table tr td input[type=radio], .membership .inner .join .join_inner table tr td input[type=checkbox] {
+.membership .inner .join .join_inner table tr td input[type=radio],
+.membership .inner .join .join_inner table tr td input[type=checkbox] {
   margin-right: 30px;
 }
 .membership .inner .join .join_inner table tr td textarea {
@@ -606,12 +612,59 @@ fieldset {
   padding: 10px;
   border: 1px solid #aaa;
 }
+.membership .inner .join .join_inner table tr td label {
+  font-size: 16px;
+}
 .membership .inner .join .join_inner table tr p {
   font: 11px/1 "맑은 고딕";
   color: #ff4081;
   margin-top: 5px;
 }
 
+@media screen and (max-width: 1179px) {
+  .membership .inner .join {
+    width: 100%;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .membership .inner .join .join_inner h1 {
+    font: 30px/1 "Source Serif Pro";
+  }
+  .membership .inner .join .join_inner table tr th,
+.membership .inner .join .join_inner table tr td {
+    padding: 1vh 2vw;
+  }
+  .membership .inner .join .join_inner table tr th {
+    font-size: 13px;
+  }
+  .membership .inner .join .join_inner table tr th input[type=reset],
+.membership .inner .join .join_inner table tr th input[type=submit] {
+    height: 30px;
+    margin: 0 0 0 10px;
+    font: bold 12px/30px "open sans";
+  }
+  .membership .inner .join .join_inner table tr td {
+    border-left: 1px solid #aaa;
+  }
+  .membership .inner .join .join_inner table tr td input[type=text],
+.membership .inner .join .join_inner table tr td input[type=password],
+.membership .inner .join .join_inner table tr td select {
+    width: 100%;
+  }
+  .membership .inner .join .join_inner table tr td textarea {
+    width: 100%;
+    height: 10vh;
+  }
+  .membership .inner .join .join_inner table tr td label {
+    font-size: 12px;
+  }
+  .membership .inner .join .join_inner table tr p {
+    font: 11px/1 "맑은 고딕";
+    color: #ff4081;
+    margin-top: 5px;
+  }
+}
 .department .sub_visual {
   background: url(../img/sub_img1.jpg) no-repeat bottom/cover;
 }
@@ -942,10 +995,13 @@ fieldset {
     font: bold 14px/1 "open sans";
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
   }
   .location .inner .map_content .branch li a i {
     font-size: 14px;
-    margin-right: 1vw;
+    margin-right: 0;
+    margin-bottom: 5px;
   }
   .location .inner .map_content .branch li p {
     font-size: 12px;
