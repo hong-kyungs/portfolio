@@ -828,69 +828,134 @@ fieldset {
 .location .sub_visual {
   background: url(../img/sub_img5.jpg) no-repeat center/cover;
 }
-.location .map_info {
+.location .inner {
+  width: 1180px;
+}
+.location .inner .map_info {
   width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
 }
-.location .map_info .info_list {
+.location .inner .map_info .info_list {
   width: 25%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.location .map_info .info_list i {
+.location .inner .map_info .info_list i {
   font-size: 30px;
   color: #476257;
   margin-bottom: 10px;
 }
-.location .map_info .info_list h2 {
+.location .inner .map_info .info_list h2 {
   font: bold 20px/1 "open sans";
   color: #333;
   margin-bottom: 10px;
 }
-.location .map_info .info_list p {
+.location .inner .map_info .info_list p {
   font: 15px/1.5 "open sans";
   color: #333;
   text-align: center;
 }
-.location .map_content {
+.location .inner .map_content {
   width: 80%;
   margin: 0 auto;
   display: flex;
 }
-.location .map_content .branch {
+.location .inner .map_content .branch {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.location .map_content .branch li {
+.location .inner .map_content .branch li {
   width: 100%;
   cursor: pointer;
 }
-.location .map_content .branch li a {
+.location .inner .map_content .branch li a {
   display: block;
   font: bold 20px/1 "open sans";
   color: #333;
   margin-bottom: 20px;
 }
-.location .map_content .branch li a i {
+.location .inner .map_content .branch li a i {
   font-size: 18px;
   color: #476257;
   margin-right: 20px;
 }
-.location .map_content .branch li.on i {
+.location .inner .map_content .branch li.on i {
   color: #ad9f87;
 }
-.location .map_content #map {
+.location .inner .map_content #map {
   width: 70%;
   height: 400px;
 }
 
+@media screen and (max-width: 1179px) {
+  .location .inner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 539px) {
+  .location .inner {
+    width: 100%;
+    padding: 10px;
+  }
+  .location .inner .map_info {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .location .inner .map_info .info_list {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .location .inner .map_info .info_list i {
+    font-size: 22px;
+  }
+  .location .inner .map_info .info_list h2 {
+    font: bold 16px/1 "open sans";
+  }
+  .location .inner .map_info .info_list p {
+    font: 12px/1.5 "open sans";
+  }
+  .location .inner .map_content {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .location .inner .map_content .branch {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .location .inner .map_content .branch li {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .location .inner .map_content .branch li a {
+    font: bold 14px/1 "open sans";
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .location .inner .map_content .branch li a i {
+    font-size: 14px;
+    margin-right: 1vw;
+  }
+  .location .inner .map_content .branch li p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .location .inner .map_content #map {
+    width: 100%;
+    height: 30vh;
+  }
+}
 .product {
   background: #efefef;
 }
