@@ -1271,6 +1271,7 @@ fieldset {
   border-radius: 5px;
 }
 .youtube figure.pop {
+  z-index: 2;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -1294,6 +1295,35 @@ fieldset {
   color: #fff;
 }
 
+@media screen and (max-width: 539px) {
+  .youtube .vidList {
+    width: 100%;
+    padding: 10px;
+  }
+  .youtube .vidList article {
+    height: 30vh;
+  }
+  .youtube .vidList article h2 {
+    font: 20px/1 "Playfair Display";
+  }
+  .youtube .vidList article > a {
+    width: 55%;
+  }
+  .youtube .vidList article .vid_con {
+    width: 35%;
+  }
+  .youtube .vidList article .vid_con h3 {
+    font: bold 14px/1.4 "open sans";
+  }
+  .youtube .vidList article .vid_con p {
+    font: 10px/1.2 "open sans";
+  }
+  .youtube .vidList article .vid_con .play_btn {
+    width: 15vw;
+    height: 3vh;
+    font: 12px/3vh "open sans";
+  }
+}
 * {
   margin: 0px;
   padding: 0px;
