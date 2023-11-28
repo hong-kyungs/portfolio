@@ -632,14 +632,14 @@ fieldset {
     font: 30px/1 "Source Serif Pro";
   }
   .membership .inner .join .join_inner table tr th,
-.membership .inner .join .join_inner table tr td {
+  .membership .inner .join .join_inner table tr td {
     padding: 1vh 2vw;
   }
   .membership .inner .join .join_inner table tr th {
     font-size: 13px;
   }
   .membership .inner .join .join_inner table tr th input[type=reset],
-.membership .inner .join .join_inner table tr th input[type=submit] {
+  .membership .inner .join .join_inner table tr th input[type=submit] {
     height: 30px;
     margin: 0 0 0 10px;
     font: bold 12px/30px "open sans";
@@ -648,8 +648,8 @@ fieldset {
     border-left: 1px solid #aaa;
   }
   .membership .inner .join .join_inner table tr td input[type=text],
-.membership .inner .join .join_inner table tr td input[type=password],
-.membership .inner .join .join_inner table tr td select {
+  .membership .inner .join .join_inner table tr td input[type=password],
+  .membership .inner .join .join_inner table tr td select {
     width: 100%;
   }
   .membership .inner .join .join_inner table tr td textarea {
@@ -2061,59 +2061,59 @@ body #footer .inner span {
     width: 100%;
   }
   body #community .com_inner .wrap article .comment h1,
-body #community .com_inner .wrap article .swiper-slide h1,
-body #community .com_inner .wrap .swiper-wrapper .comment h1,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide h1,
-body #community .com_inner .swiper article .comment h1,
-body #community .com_inner .swiper article .swiper-slide h1,
-body #community .com_inner .swiper .swiper-wrapper .comment h1,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide h1 {
+  body #community .com_inner .wrap article .swiper-slide h1,
+  body #community .com_inner .wrap .swiper-wrapper .comment h1,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide h1,
+  body #community .com_inner .swiper article .comment h1,
+  body #community .com_inner .swiper article .swiper-slide h1,
+  body #community .com_inner .swiper .swiper-wrapper .comment h1,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide h1 {
     font: bold 24px/1 "Open Sans";
     color: #a18870;
   }
   body #community .com_inner .wrap article .comment .cus_img,
-body #community .com_inner .wrap article .swiper-slide .cus_img,
-body #community .com_inner .wrap .swiper-wrapper .comment .cus_img,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img,
-body #community .com_inner .swiper article .comment .cus_img,
-body #community .com_inner .swiper article .swiper-slide .cus_img,
-body #community .com_inner .swiper .swiper-wrapper .comment .cus_img,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img {
+  body #community .com_inner .wrap article .swiper-slide .cus_img,
+  body #community .com_inner .wrap .swiper-wrapper .comment .cus_img,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img,
+  body #community .com_inner .swiper article .comment .cus_img,
+  body #community .com_inner .swiper article .swiper-slide .cus_img,
+  body #community .com_inner .swiper .swiper-wrapper .comment .cus_img,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img {
     width: 80px;
     height: 80px;
   }
   body #community .com_inner .wrap article .comment .cus_img img,
-body #community .com_inner .wrap article .swiper-slide .cus_img img,
-body #community .com_inner .wrap .swiper-wrapper .comment .cus_img img,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img img,
-body #community .com_inner .swiper article .comment .cus_img img,
-body #community .com_inner .swiper article .swiper-slide .cus_img img,
-body #community .com_inner .swiper .swiper-wrapper .comment .cus_img img,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img img {
+  body #community .com_inner .wrap article .swiper-slide .cus_img img,
+  body #community .com_inner .wrap .swiper-wrapper .comment .cus_img img,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img img,
+  body #community .com_inner .swiper article .comment .cus_img img,
+  body #community .com_inner .swiper article .swiper-slide .cus_img img,
+  body #community .com_inner .swiper .swiper-wrapper .comment .cus_img img,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
   }
   body #community .com_inner .wrap article .comment h2,
-body #community .com_inner .wrap article .swiper-slide h2,
-body #community .com_inner .wrap .swiper-wrapper .comment h2,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide h2,
-body #community .com_inner .swiper article .comment h2,
-body #community .com_inner .swiper article .swiper-slide h2,
-body #community .com_inner .swiper .swiper-wrapper .comment h2,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide h2 {
+  body #community .com_inner .wrap article .swiper-slide h2,
+  body #community .com_inner .wrap .swiper-wrapper .comment h2,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide h2,
+  body #community .com_inner .swiper article .comment h2,
+  body #community .com_inner .swiper article .swiper-slide h2,
+  body #community .com_inner .swiper .swiper-wrapper .comment h2,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide h2 {
     font: 16px/1 "Source Serif Pro";
     text-align: center;
   }
   body #community .com_inner .wrap article .comment h3,
-body #community .com_inner .wrap article .swiper-slide h3,
-body #community .com_inner .wrap .swiper-wrapper .comment h3,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide h3,
-body #community .com_inner .swiper article .comment h3,
-body #community .com_inner .swiper article .swiper-slide h3,
-body #community .com_inner .swiper .swiper-wrapper .comment h3,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
+  body #community .com_inner .wrap article .swiper-slide h3,
+  body #community .com_inner .wrap .swiper-wrapper .comment h3,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide h3,
+  body #community .com_inner .swiper article .comment h3,
+  body #community .com_inner .swiper article .swiper-slide h3,
+  body #community .com_inner .swiper .swiper-wrapper .comment h3,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
     font: 12px/1 "Open Sans";
   }
   body #footer .inner {
@@ -2231,79 +2231,83 @@ body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
     height: 60vh;
   }
   body #community .com_inner .wrap article,
-body #community .com_inner .wrap .swiper-wrapper,
-body #community .com_inner .swiper article,
-body #community .com_inner .swiper .swiper-wrapper {
+  body #community .com_inner .wrap .swiper-wrapper,
+  body #community .com_inner .swiper article,
+  body #community .com_inner .swiper .swiper-wrapper {
     padding: 0;
   }
   body #community .com_inner .wrap article .comment,
-body #community .com_inner .wrap article .swiper-slide,
-body #community .com_inner .wrap .swiper-wrapper .comment,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide,
-body #community .com_inner .swiper article .comment,
-body #community .com_inner .swiper article .swiper-slide,
-body #community .com_inner .swiper .swiper-wrapper .comment,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide {
+  body #community .com_inner .wrap article .swiper-slide,
+  body #community .com_inner .wrap .swiper-wrapper .comment,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide,
+  body #community .com_inner .swiper article .comment,
+  body #community .com_inner .swiper article .swiper-slide,
+  body #community .com_inner .swiper .swiper-wrapper .comment,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide {
     position: absolute;
     height: 60%;
     padding: 0 10vw;
     top: 10vh;
   }
   body #community .com_inner .wrap article .comment h1,
-body #community .com_inner .wrap article .swiper-slide h1,
-body #community .com_inner .wrap .swiper-wrapper .comment h1,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide h1,
-body #community .com_inner .swiper article .comment h1,
-body #community .com_inner .swiper article .swiper-slide h1,
-body #community .com_inner .swiper .swiper-wrapper .comment h1,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide h1 {
+  body #community .com_inner .wrap article .swiper-slide h1,
+  body #community .com_inner .wrap .swiper-wrapper .comment h1,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide h1,
+  body #community .com_inner .swiper article .comment h1,
+  body #community .com_inner .swiper article .swiper-slide h1,
+  body #community .com_inner .swiper .swiper-wrapper .comment h1,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide h1 {
     font: bold 24px/1 "Open Sans";
     color: #a18870;
   }
   body #community .com_inner .wrap article .comment .cus_img,
-body #community .com_inner .wrap article .swiper-slide .cus_img,
-body #community .com_inner .wrap .swiper-wrapper .comment .cus_img,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img,
-body #community .com_inner .swiper article .comment .cus_img,
-body #community .com_inner .swiper article .swiper-slide .cus_img,
-body #community .com_inner .swiper .swiper-wrapper .comment .cus_img,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img {
+  body #community .com_inner .wrap article .swiper-slide .cus_img,
+  body #community .com_inner .wrap .swiper-wrapper .comment .cus_img,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img,
+  body #community .com_inner .swiper article .comment .cus_img,
+  body #community .com_inner .swiper article .swiper-slide .cus_img,
+  body #community .com_inner .swiper .swiper-wrapper .comment .cus_img,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img {
     width: 80px;
     height: 80px;
   }
   body #community .com_inner .wrap article .comment .cus_img img,
-body #community .com_inner .wrap article .swiper-slide .cus_img img,
-body #community .com_inner .wrap .swiper-wrapper .comment .cus_img img,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img img,
-body #community .com_inner .swiper article .comment .cus_img img,
-body #community .com_inner .swiper article .swiper-slide .cus_img img,
-body #community .com_inner .swiper .swiper-wrapper .comment .cus_img img,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img img {
+  body #community .com_inner .wrap article .swiper-slide .cus_img img,
+  body #community .com_inner .wrap .swiper-wrapper .comment .cus_img img,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide .cus_img img,
+  body #community .com_inner .swiper article .comment .cus_img img,
+  body #community .com_inner .swiper article .swiper-slide .cus_img img,
+  body #community .com_inner .swiper .swiper-wrapper .comment .cus_img img,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide .cus_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
   }
   body #community .com_inner .wrap article .comment h2,
-body #community .com_inner .wrap article .swiper-slide h2,
-body #community .com_inner .wrap .swiper-wrapper .comment h2,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide h2,
-body #community .com_inner .swiper article .comment h2,
-body #community .com_inner .swiper article .swiper-slide h2,
-body #community .com_inner .swiper .swiper-wrapper .comment h2,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide h2 {
+  body #community .com_inner .wrap article .swiper-slide h2,
+  body #community .com_inner .wrap .swiper-wrapper .comment h2,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide h2,
+  body #community .com_inner .swiper article .comment h2,
+  body #community .com_inner .swiper article .swiper-slide h2,
+  body #community .com_inner .swiper .swiper-wrapper .comment h2,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide h2 {
     font: 16px/1 "Source Serif Pro";
     text-align: center;
   }
   body #community .com_inner .wrap article .comment h3,
-body #community .com_inner .wrap article .swiper-slide h3,
-body #community .com_inner .wrap .swiper-wrapper .comment h3,
-body #community .com_inner .wrap .swiper-wrapper .swiper-slide h3,
-body #community .com_inner .swiper article .comment h3,
-body #community .com_inner .swiper article .swiper-slide h3,
-body #community .com_inner .swiper .swiper-wrapper .comment h3,
-body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
+  body #community .com_inner .wrap article .swiper-slide h3,
+  body #community .com_inner .wrap .swiper-wrapper .comment h3,
+  body #community .com_inner .wrap .swiper-wrapper .swiper-slide h3,
+  body #community .com_inner .swiper article .comment h3,
+  body #community .com_inner .swiper article .swiper-slide h3,
+  body #community .com_inner .swiper .swiper-wrapper .comment h3,
+  body #community .com_inner .swiper .swiper-wrapper .swiper-slide h3 {
     font: 12px/1 "Open Sans";
+  }
+  body #community .com_inner .swiper-button-next::after,
+  body #community .com_inner .swiper-button-prev::after {
+    font-size: 24px;
   }
   body #footer .inner {
     padding: 10px;
