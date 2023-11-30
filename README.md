@@ -120,6 +120,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 
 - Youtube API를 이용하여 미디어 호출
 - Youtube에 만들어둔 playlist를 불러오고, 동영상 정보를 추출하여 title, thumbnail, description에 반영한다.
+- 특정 영상 클릭시 iframe요소로 동영상을 재생한다.
 
 <img src="gif/youtube.gif" width="600" height="400"/>
 
