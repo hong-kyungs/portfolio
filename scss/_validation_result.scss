@@ -1,0 +1,30 @@
+.join_result {
+  .sub_visual {
+    background: url(../img/sub_img6.jpg) no-repeat center/cover;
+  }
+  .inner {
+    .check {
+      font-size: 50px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      font: 28px/1 'open sans';
+      text-align: center;
+    }
+  }
+}
+
+//mobile 구간
+@media screen and (max-width: 539px) {
+  .join_result {
+    .inner {
+      .check {
+        font-size: 30px;
+      }
+      p {
+        font: 20px/1 'open sans';
+      }
+    }
+  }
+}

@@ -175,7 +175,7 @@ body {
     .inner {
       width: 1180px;
       margin: 0 auto;
-      min-height: 500px;
+      min-height: 150px;
       h1 {
         font: 40px/1 'Source Serif Pro';
         color: #555;
@@ -301,7 +301,7 @@ body {
     .content {
       .inner {
         width: 100%;
-        min-height: 400px;
+        // min-height: 400px;
       }
     }
 
@@ -330,95 +330,95 @@ body {
 
 //mobile 구간
 @media screen and (max-width: 539px) {
-  @media screen and (max-width: 1179px) {
-    body {
-      width: 100%;
-      height: 100%;
-      #header_sub {
-        .inner {
-          width: 100%;
-          > h1 {
-            left: 20px;
-          }
-          .menuWeb {
-            display: none;
-          }
-          .btnCall {
-            display: block;
-          }
+  // @media screen and (max-width: 1179px) {
+  body {
+    width: 100%;
+    height: 100%;
+    #header_sub {
+      .inner {
+        width: 100%;
+        > h1 {
+          left: 20px;
+        }
+        .menuWeb {
+          display: none;
+        }
+        .btnCall {
+          display: block;
         }
       }
+    }
 
-      .content {
-        .inner {
-          width: 100%;
-          min-height: 400px;
-        }
+    .content {
+      .inner {
+        width: 100%;
+        // min-height: 400px;
       }
+    }
 
-      #footer_sub {
-        .inner {
+    #footer_sub {
+      .inner {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        .footer-logo {
           width: 100%;
-          padding: 10px;
-          margin: 0;
-          position: relative;
-          align-items: center;
-          justify-content: center;
-          .footer-logo {
-            width: 100%;
-            order: 1;
-            margin-right: 0;
-            h1 {
-              text-align: center;
-              margin-top: 10px;
-              margin-bottom: 20px;
-            }
-            > p {
-              display: none;
-            }
-          }
-          .footer_contact {
-            width: 100%;
-            margin-right: 0;
-            order: 3;
-            > p {
-              display: none;
-            }
-            address {
-              > p {
-                font: 12px/1.2 'open sans';
-                margin-bottom: 10px;
-                color: #fff;
-                text-align: center;
-              }
-            }
-          }
-          .footer_sns {
-            width: 100%;
-            order: 2;
-            padding-left: 0;
-            p {
-              display: none;
-            }
-            > ul {
-              position: relative;
-              display: inline-block;
-              left: 50%;
-              transform: translateX(-50%);
-              li {
-                margin-bottom: 10px;
-              }
-            }
-          }
-          .copyright {
-            order: 4;
+          order: 1;
+          margin-right: 0;
+          h1 {
+            text-align: center;
+            margin-top: 10px;
             margin-bottom: 20px;
           }
-          &::after {
+          > p {
             display: none;
           }
+        }
+        .footer_contact {
+          width: 100%;
+          margin-right: 0;
+          order: 3;
+          > p {
+            display: none;
+          }
+          address {
+            > p {
+              font: 12px/1.2 'open sans';
+              margin-bottom: 10px;
+              color: #fff;
+              text-align: center;
+            }
+          }
+        }
+        .footer_sns {
+          width: 100%;
+          order: 2;
+          padding-left: 0;
+          p {
+            display: none;
+          }
+          > ul {
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            li {
+              margin-bottom: 10px;
+            }
+          }
+        }
+        .copyright {
+          order: 4;
+          margin-bottom: 20px;
+        }
+        &::after {
+          display: none;
         }
       }
     }
   }
+  // }
 }

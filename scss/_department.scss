@@ -153,6 +153,10 @@
               filter: grayscale(0.2);
             }
           }
+          article:nth-child(4),
+          article:nth-child(5) {
+            flex-direction: row-reverse;
+          }
         }
       }
     }
