@@ -1,5 +1,8 @@
 # GREEN OAK
 
+![](gif/intro.jpg)|![](gif/intro-2.jpg)
+---|---|
+
 [클론 사이트 바로가기](https://greenoak-portfolio.netlify.app)
 
 ## 📋 Project
