@@ -35,7 +35,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 - Swiper : auto slide, navigation, pagination
 - Scroll to top button
 
-<img src="gif/home.gif" width="600" height="400"/>
+<img src="gif/home.gif" />
 
 </div>
 </details>
@@ -46,7 +46,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 
 - hover 효과 : trasform, rotate, filter
 
-<img src="gif/about-us.gif" width="600" height="400"/>
+<img src="gif/about-us.gif" />
 
 </div>
 </details>
@@ -58,7 +58,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 - Isotope.js : 이미지 자동 정렬 & 필터링
 - 이미지 클릭시 풀스크린 팝업창이 생성된다.
 
-<img src="gif/product.gif" width="600" height="400"/>
+<img src="gif/product.gif" />
 
 </div>
 </details>
@@ -71,7 +71,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 - Hover 효과 : opacity, transition
 - 이미지 클릭시 풀스크린 팝업창이 생성된다.
 
-<img src="gif/gallery.gif" width="600" height="400"/>
+<img src="gif/gallery.gif" />
 
 </div>
 </details>
@@ -82,7 +82,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 
 - 아코디언 효과
 
-<img src="gif/community.gif" width="600" height="400"/>
+<img src="gif/community.gif" />
 
 </div>
 </details>
@@ -94,7 +94,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 - Kakaomap API를 이용하여 지도 호출
 - 지도 생성, 마커 적용
 
-<img src="gif/location.gif" width="600" height="400"/>
+<img src="gif/location.gif"/>
 
 </div>
 </details>
@@ -113,7 +113,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 - 회원가입 조건에 맞지 않게 작성시 - 해당항목별로 에러메세지 생성
 - 회원가입 조건에 올바르게 작성시 - 회원가입 성공 화면으로 전환
 
-<img src="gif/join.gif" width="600" height="400"/>
+<img src="gif/join.gif" />
 
 </div>
 </details>
@@ -126,7 +126,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 - Youtube에 만들어둔 playlist를 불러오고, 동영상 정보를 추출하여 title, thumbnail, description에 반영한다.
 - 특정 영상 클릭시 iframe요소로 동영상을 재생한다.
 
-<img src="gif/youtube.gif" width="600" height="400"/>
+<img src="gif/youtube.gif" />
 
 </div>
 </details>
