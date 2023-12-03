@@ -1,9 +1,10 @@
 # GREEN OAK
 
-![](gif/intro.jpg)|![](gif/intro-2.jpg)
----|---|
+| ![](gif/intro.jpg) | ![](gif/intro-2.jpg) |
+| ------------------ | -------------------- |
 
-[클론 사이트 바로가기](https://greenoak-portfolio.netlify.app)
+
+[사이트 바로가기](https://greenoak-portfolio.netlify.app)
 
 ## 📋 Project
 
@@ -90,7 +91,7 @@ HTML, CSS, JS를 학습하며 제작한 반응형 웹사이트입니다.
 <summary>LOCATION</summary>
 <div markdown="1">
 
-- Kakamap API를 이용하여 지도 호출
+- Kakaomap API를 이용하여 지도 호출
 - 지도 생성, 마커 적용
 
 <img src="gif/location.gif" width="600" height="400"/>
