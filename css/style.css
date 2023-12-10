@@ -2219,7 +2219,7 @@ body #footer .inner span {
     font: bold 14px/1 "open sans";
   }
   body #product {
-    padding: 100px 0;
+    padding: 50px 30px;
   }
   body #product .inner {
     width: 100%;
@@ -2238,10 +2238,17 @@ body #footer .inner span {
     flex-wrap: wrap;
   }
   body #product .inner .wrap article {
-    width: 300px;
+    width: 100%;
+    margin-right: 0;
+    transform: translateY(0);
+    transition: none;
+    height: 250px;
+    margin-bottom: 20px;
+    opacity: 1;
   }
   body #product .inner .wrap article .img .img_txt {
     padding: 30px;
+    height: 250px;
   }
   body #product .inner a {
     font: bold 12px/1 "open sans";
